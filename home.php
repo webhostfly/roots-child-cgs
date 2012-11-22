@@ -15,73 +15,14 @@
             </div>
         </div> <!-- header -->
 
-        <div id="main_nav" role="navigation">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <?php
-                        wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav'));
-                    ?>
-                    <form action="" class="navbar-search pull-right">
-                        <input type="text" class="search-query" placeholder="Search">
-                    </form>
-                </div> <!-- .bavbar-inner -->
-            </div> <!-- .navbar -->
-        </div> <!-- main_nav -->
+        <?php get_template_part('templates/nav', 'main'); ?>
 
         <div id="headline" class="row">
             <div id="picnews" class="span8">
-                <div id="slider" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="active item">
-                            <img src="http://dummyimage.com/770x3:2&text=Pic1" alt="">
-                            <div class="carousel-caption">
-                                <p>pic1</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="http://dummyimage.com/770x3:2&text=Pic2" alt="">
-                            <div class="carousel-caption">
-                                <p>中文怎样？</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="http://dummyimage.com/770x3:2&text=Pic3" alt="">
-                            <div class="carousel-caption">
-                                <p>pic1</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#slider" class="carousel-control left" data-slide="prev">&lsaquo;</a>
-                    <a href="#slider" class="carousel-control right" data-slide="next">&rsaquo;</a>
-                </div>
+                <?php get_template_part('templates/content', 'picnews'); ?>
             </div>
             <div class="news span4">
-                <div class="well well-title">
-                    <a href="#"><h1>重要新闻</h1></a>
-                </div>
-                <ul class="unstyled">
-                    <li><a href="#">支然藝作面天方是哥縣了來氣家</a></li>
-                    <li><a href="#">如人金麼早特出有半客朋你爭女玩過</a></li>
-                    <li><a href="#">美代經她們美得母了排</a></li>
-                    <li><a href="#">中當分紀背黃設這施</a></li>
-                    <li><a href="#">死舉地統港間條中物一響了會化多及臉</a></li>
-                    <li><a href="#">大家年親性方說</a></li>
-                    <li><a href="#">就怎因看爸空招那是故單假基條馬土點及動樣前</a></li>
-                    <li><a href="#">專進口的每的待步情年司兒一為不的細問</a></li>
-                    <li><a href="#">出已光高單</a></li>
-                    <li><a href="#">戰雖作查的兩著人時一要從方制向是間平良上的錯樓</a></li>
-                    <li><a href="#">區系以從題地入課</a></li>
-                    <li><a href="#">光生智色前用成木</a></li>
-                    <li><a href="#">示人子動歡和的定會意麼國書果沒</a></li>
-                    <li><a href="#">母女先了行標東以面來不特手</a></li>
-                    <li><a href="#">似了力的精以考很香地親我朋告你體望來房案結那</a></li>
-                    <li><a href="#">光生智色前用成木</a></li>
-                    <li><a href="#">是獨家親告特劇</a></li>
-                    <li><a href="#">愛難出理少華黑喜加小</a></li>
-                    <li><a href="#">母女先了行標東以面來不特手</a></li>
-                    <li><a href="#">港國來克紙</a></li>
-                    <p><a href="#" class="btn btn-primary btn-large pull-right">了解更多</a></p>
-                </ul>
+                <?php echo cgs_post_list( "cgsnews", 15 ); ?>
             </div>
         </div> <!-- headline -->
 
