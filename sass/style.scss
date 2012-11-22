@@ -1,0 +1,74 @@
+/*
+Theme Name:       Roots Child CGS
+Theme URI:        https://github.com/yuanl/roots-child-cgs
+Description:      Child theme for the Roots theme (http://www.rootstheme.com/). Use in http://www.bjcgs.com
+Author:           Yuanl
+Author URI:       https://github.com/yuanl
+Template:         roots
+*/
+
+$czblue: #059;
+
+body {
+	background-color: whiteSmoke;
+}
+#links {
+	text-align: center;
+	font-size: x-small;
+}
+
+.well-title {
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: $czblue;
+	border: 1px solid shade($czblue, 5%);
+
+	&:hover {
+		background-color: lighten($czblue, 5%);
+	}
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	h1 {
+		color: white;
+		font-size: 26px;
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+footer {
+	p {
+		text-align: center;
+		font-size: x-small;
+	}
+}
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 979px) {
+  /* Fix top padding when using the responsive grid with the fixed topbar */
+  body.top-navbar {
+    padding-top: 0;
+  }
+}
