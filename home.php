@@ -22,7 +22,7 @@
                 <?php get_template_part('templates/content', 'picnews'); ?>
             </div>
             <div class="news span4">
-                <?php echo cgs_post_list( "cgsnews", 15 ); ?>
+                <?php echo cgs_posts_list( "cgsnews", 15 ); ?>
             </div>
         </div> <!-- headline -->
 
@@ -30,7 +30,7 @@
         <div id="main">
             <div class="row">
                 <div class="news span4">
-                    <div class="well well-title">
+                    <div class="well well-header">
                         <a href="#"><h1>南航动态</h1></a>
                     </div>
                     <ul class="unstyled">
@@ -45,22 +45,10 @@
                     <a href="#" class="btn btn-info pull-right">了解更多</a>
                 </div>
                 <div class="news span4">
-                    <div class="well well-title">
-                        <a href="#"><h1>重点关注</h1></a>
-                    </div>
-                    <ul class="unstyled">
-                        <li><a href="#">有部專或現修女製大以師要價驗</a></li>
-                        <li><a href="#">每方候本成樣體母上個者</a></li>
-                        <li><a href="#">大子四我部裡士力答期學力否反想</a></li>
-                        <li><a href="#">建他動的心學十文</a></li>
-                        <li><a href="#">界動作只起用許什前以一物你至爭意運多好</a></li>
-                        <li><a href="#">去我先如</a></li>
-                        <li><a href="#">自法他環原為這</a></li>
-                    </ul>
-                    <a href="#" class="btn btn-info pull-right">了解更多</a>
+                    <?php echo cgs_posts_list( "focus", 7 ); ?>
                 </div>
                 <div class="news span4">
-                    <div class="well well-title">
+                    <div class="well well-header">
                         <a href="#"><h1>CGS光荣榜</h1></a>
                     </div>
                     <ul class="media-list">

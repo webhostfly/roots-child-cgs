@@ -17,69 +17,34 @@ body {
   font-size: x-small;
 }
 
-/* line 20, sass/style.scss */
-.well-title {
+/* line 22, sass/style.scss */
+.news li a {
+  color: black;
+}
+/* line 24, sass/style.scss */
+.news li a:hover {
+  color: #005599;
+}
+
+/* line 31, sass/style.scss */
+.well-header {
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #005599;
-  border: 1px solid #005091;
 }
-/* line 26, sass/style.scss */
-.well-title:hover {
-  background-color: #0063b3;
-}
-/* line 31, sass/style.scss */
-.well-title a:hover {
-  text-decoration: none;
-}
-/* line 36, sass/style.scss */
-.well-title h1 {
-  color: white;
-  font-size: 26px;
+/* line 43, sass/style.scss */
+.well-header h1 {
+  font-size: 20px;
   line-height: 1;
   margin: 0;
   padding: 0;
 }
+/* line 50, sass/style.scss */
+.well-header h1 a:hover {
+  text-decoration: none;
+}
 
-/* line 46, sass/style.scss */
+/* line 58, sass/style.scss */
 footer p {
   text-align: center;
   font-size: x-small;
-}
-
-/* ==========================================================================
-   WordPress Generated Classes
-   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-   ========================================================================== */
-/* line 58, sass/style.scss */
-.aligncenter {
-  display: block;
-  margin: 0 auto;
-}
-
-/* line 59, sass/style.scss */
-.alignleft {
-  float: left;
-}
-
-/* line 60, sass/style.scss */
-.alignright {
-  float: right;
-}
-
-/* line 61, sass/style.scss */
-figure.alignnone {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-@media (max-width: 979px) {
-  /* Fix top padding when using the responsive grid with the fixed topbar */
-  /* line 71, sass/style.scss */
-  body.top-navbar {
-    padding-top: 0;
-  }
 }

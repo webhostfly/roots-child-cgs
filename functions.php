@@ -1,55 +1,58 @@
 <?php
 
-function cgs_post_list( $category_slug, $numberposts = 10 ) {
-	$category_id = get_category_by_slug( $category_slug );
+function cgs_posts_list( $category_slug, $numberposts = 10 ) {
+	$category = get_category_by_slug( $category_slug );
+	$category_id = $category->term_id;
 
-	$list_title = cgs_post_list_header( $category_id );
-
-	$readmore = sprintf(
-		'<a href="%s" class="btn btn-info btn-small pull-right">%s</a>',
-		get_category_link( $category_id ),
-		get_catname( $category_id )
-	);
-	
-	return = $list_title . '<ul class="unstyled">' . cgs_post_list_ul( $category_id, $numberposts ) . '</ul>' . $readmore;
+	cgs_posts_list_header( $category_id );
+	cgs_posts_list_ul( $category_id, $numberposts );
 }
 
-function cgs_post_list_header( $category_id ) {
-	return sprintf('
-				<div class="well well-header">
-					<a href="%s"><h1>%s</h1></a>
-				</div>
-				', 
-				get_category_list( $category_id ), 
-				get_catname( $category_id )
-			);
+function cgs_posts_list_header( $category_id ) {
+?>
+	<div class="well well-header">
+		<h1>
+			<a href="<?php echo get_category_link( $category_id ); ?>">
+				<?php echo get_catname( $category_id ); ?>
+			</a>
+			<a href="<?php echo get_category_link( $category_id );?>" class="btn btn-primary btn-mini pull-right">更多</a>
+		</h1>
+	</div>
+<?php
+	// $output = '';
+	// $output .= '<div class="well well-header">';
+	// $output .= '<a href="' . get_category_link( $category_id ) . '"><h1>' . get_catname( $category_id ) . '</h1></a></div>';
+
+	// return $output;
 }
 
-function cgs_post_list_ul( $category_id, $numberposts ) {
-	$list = '';
+function cgs_posts_list_ul( $category_id, $numberposts ) {
+	$output = '';
 	$args = array(
 	    'numberposts'     => $numberposts,
 	    'offset'          => 0,
 	    'category'        => $category_id,
 	    'orderby'         => 'post_date',
 	    'order'           => 'DESC',
-	    'include'         => ,
-	    'exclude'         => ,
-	    'meta_key'        => ,
-	    'meta_value'      => ,
 	    'post_type'       => 'post',
-	    'post_mime_type'  => ,
-	    'post_parent'     => ,
 	    'post_status'     => 'publish',
 	    'suppress_filters' => true
 	);
 
-	$tmpposts = get_posts( $args );
-	foreach ($tmppost as $post) {
-		setup_postdata($post);
-		$list .= sprintf('<li><a href="%s">%s</a></li>', the_permalink(), the_title());
-	}
-	return $list;
+	global $post;
+	$posts = get_posts( $args );
+	echo '<ul class="unstyled">';
+
+	foreach ($posts as $post) : setup_postdata($post); ?>
+		<li>
+			<span class="label pull-right"><?php echo the_time('m-d'); ?></span>
+			<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+		</li>
+	<?php endforeach; ?>
+
+<?php
+	echo '</ul>';
+	wp_reset_postdata();
 }
 
 ?>
