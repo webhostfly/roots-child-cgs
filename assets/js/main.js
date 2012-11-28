@@ -7,5 +7,6 @@ $(function() {
 		function() {
 			$(this).find(".readmore").fadeTo("fast", 0);
 		}
-		);
+	);
+	$("#slider .item").first().addClass("active");
 });

@@ -1,5 +1,18 @@
 <?php
 
+function cgs_setup() {
+	register_nav_menus( array(
+		'primary' => __( 'Primary Navigation', 'cgs' ),
+	) );
+
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 450, 300, true );
+	add_image_size( "slide", 770, 513, false );
+	add_image_size("avator", 220, 146, false);
+	add_image_size( '2_3_thumbnail', 100, 150, false );
+}
+add_action( 'after_setup_theme', 'cgs_setup' );
+
 function cgs_posts_list( $category_slug, $numberposts = 10, $post_type = "post" ) {
 	$category = get_category_by_slug( $category_slug );
 	$category_id = $category->term_id;
@@ -42,7 +55,7 @@ function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post" ) {
 	$posts = get_posts( $args );
 ?>
 	<ul class="unstyled">
-	<?php foreach ($posts as $post) : setup_postdata($post) ?>
+	<?php foreach ($posts as $post) : setup_postdata($post); ?>
 		<li>
 			<a href="<?php echo the_permalink(); ?>">
 				<span class="label pull-right"><?php echo the_time('m-d'); ?></span>
