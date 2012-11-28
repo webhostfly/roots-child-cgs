@@ -18,6 +18,10 @@
                 <p>pic1</p>
             </div>
         </div>
+        <?php
+            $posts = get_posts(array("post_type" => "slide"));
+            krumo($posts);
+        ?>
     </div>
     <a href="#slider" class="carousel-control left" data-slide="prev">&lsaquo;</a>
     <a href="#slider" class="carousel-control right" data-slide="next">&rsaquo;</a>

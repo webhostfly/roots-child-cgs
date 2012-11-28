@@ -10,9 +10,7 @@
 
     <div class="container">
         <div id="header" class="row">
-            <div class="span12">
-                <img src="http://dummyimage.com/1170x220" alt="cgslogo" id="logo" width="1170" height="220">
-            </div>
+
         </div> <!-- header -->
 
         <?php get_template_part('templates/nav', 'main'); ?>
@@ -31,18 +29,9 @@
             <div class="row">
                 <div class="news span4">
                     <div class="well well-header">
-                        <a href="#"><h1>南航动态</h1></a>
+                        <h3><a href=""></a></h3>
                     </div>
-                    <ul class="unstyled">
-                        <li><a href="#">有部專或現修女製大以師要價驗</a></li>
-                        <li><a href="#">每方候本成樣體母上個者</a></li>
-                        <li><a href="#">大子四我部裡士力答期學力否反想</a></li>
-                        <li><a href="#">建他動的心學十文</a></li>
-                        <li><a href="#">界動作只起用許什前以一物你至爭意運多好</a></li>
-                        <li><a href="#">去我先如</a></li>
-                        <li><a href="#">自法他環原為這</a></li>
-                    </ul>
-                    <a href="#" class="btn btn-info pull-right">了解更多</a>
+                    <?php echo cgs_posts_list_ul( "", 10, "industrylink" ); ?>
                 </div>
                 <div class="news span4">
                     <?php echo cgs_posts_list( "focus", 7 ); ?>

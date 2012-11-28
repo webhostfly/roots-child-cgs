@@ -15,7 +15,6 @@ function cgs_posts_list_header( $category_id ) {
 			<a href="<?php echo get_category_link( $category_id ); ?>">
 				<?php echo get_catname( $category_id ); ?>
 			</a>
-			<a href="<?php echo get_category_link( $category_id );?>" class="btn btn-primary btn-mini pull-right">更多</a>
 		</h1>
 	</div>
 <?php
@@ -41,31 +40,20 @@ function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post" ) {
 
 	global $post;
 	$posts = get_posts( $args );
-	echo '<ul class="unstyled">';
-
-	switch ( $post_type ) {
-		// case "industrylink":
-		// 	break;
-		// 	foreach ($posts as $post) : setup_postdata($post);
 ?>
-<!-- 				<li>
-					<span class="label pull-right"><?php echo the_time('m-d'); ?></span>
-					<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank" ><?php echo the_title(); ?></a>
-				</li> -->
-<?php
-			 // }
-		default:
-			foreach ($posts as $post) : setup_postdata($post);
-?>
-				<li>
-					<span class="label pull-right"><?php echo the_time('m-d'); ?></span>
-					<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
-				</li>
-<?php
-			}
-	}
+	<ul class="unstyled">
+	<?php foreach ($posts as $post) : setup_postdata($post) ?>
+		<li>
+			<a href="<?php echo the_permalink(); ?>">
+				<span class="label pull-right"><?php echo the_time('m-d'); ?></span>
+				<?php echo the_title(); ?>
+			</a>
+		</li>
+	<?php endforeach; ?>
+	</ul>
+	<a href="<?php echo get_category_link( $category_id );?>" class="btn btn-primary readmore pull-right">更多</a>
 
-	echo '</ul>';
+<?php
 	wp_reset_postdata();
 }
 
@@ -129,5 +117,10 @@ function cgs_custom_columns($column, $post_id) {
 add_filter('manage_posts_columns', 'cgs_posts_columns');
 add_action('manage_posts_custom_column', 'cgs_custom_columns', 10, 2);
 
+function cgs_scripts() {
+	wp_register_script('cgs_main', get_stylesheet_directory_uri() . '/assets/js/main.js', false, null, false);
+	wp_enqueue_script('cgs_main');
+}
 
+add_action('wp_enqueue_scripts', 'cgs_scripts', 101);
 ?>
