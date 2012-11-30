@@ -9,9 +9,7 @@
     <?php get_template_part('templates/nav', 'top'); ?>
 
     <div class="container">
-        <div id="header" class="row">
-
-        </div> <!-- header -->
+        <?php get_template_part('templates/header'); ?>
 
         <?php get_template_part('templates/nav', 'main'); ?>
 
@@ -74,22 +72,25 @@
                     <?php $cats = array("depnews", "staff"); ?>
                     <?php get_template_part("templates/content", "tabbable-news"); ?>
                 </div>
-                <div class="news span3">
-                    <div class="well well-header">
-                        <h1>工作汇报</h1>
+                <div class="tabbable span3">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#" data-toggle="tab">工作汇报</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content news">
+                        <div class="tab-pane active">
+                            <?php echo do_shortcode('[wpfilebase tag="list" id="1" tpl="ul" num="10" pagenav="0" /]'); ?>
+                        </div>
                     </div>
-                    <?php echo do_shortcode('[wpfilebase tag="list" id="1" tpl="ul" num="10" pagenav="0" /]'); ?>
+                    
                 </div>
 
-            </div>
+            </div> <!-- row -->
         </div> <!-- main -->
 
         <hr />
-        <div id="links">
-            <p>
-                <a href="#" class="muted">SKYTEAM</a> | <a href="#" class="muted">SKYTRAX</a> | <a href="#" class="muted">CSAIR</a> | <a href="#" class="muted">BCIA</a>
-            </p>
-        </div> <!-- links -->
+        <?php get_template_part('templates/links'); ?>
 
         <?php get_template_part('templates/footer'); ?>
 

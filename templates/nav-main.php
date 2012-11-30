@@ -5,7 +5,10 @@
                 wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav nav-pills'));
             ?>
             <form action="" class="navbar-search pull-right">
-                <input type="text" class="search-query" placeholder="Search">
+                <div class="input-append">
+                    <input type="text" class="span2" id="appendedInputButton" placeholder="搜索文章">
+                    <button class="btn" type="button"><i class="icon-search"></i></button>
+                </div>
             </form>
         </div> <!-- .bavbar-inner -->
     </div> <!-- .navbar -->

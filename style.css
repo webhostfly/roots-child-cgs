@@ -43,7 +43,12 @@ body {
   text-decoration: none;
 }
 
-/* line 58, sass/style.scss */
+/* line 57, sass/style.scss */
+.breadcrumb {
+  background-color: #eee;
+}
+
+/* line 62, sass/style.scss */
 footer p {
   font-size: x-small;
 }
