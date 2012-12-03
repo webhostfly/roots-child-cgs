@@ -17,7 +17,7 @@
             <div class="<?php echo $item_css_class; ?>">
                 <?php the_post_thumbnail("slide"); ?>
                 <div class="carousel-caption">
-                    <p><?php the_title(); ?></p>
+                    <p><strong><?php the_title(); ?></strong></p>
                 </div>
             </div>
             <?php endif; ?>

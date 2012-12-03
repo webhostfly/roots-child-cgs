@@ -25,7 +25,7 @@ function cgs_posts_list_header( $category_id ) {
 	// return $output;
 }
 
-function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post" ) {
+function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post", $readmore = true ) {
 	$output = '';
 	$args = array(
 	    'numberposts'     => $numberposts,
@@ -51,8 +51,9 @@ function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post" ) {
 		</li>
 	<?php endforeach; ?>
 	</ul>
+	<?php if ($readmore): ?>
 	<a href="<?php echo get_category_link( $category_id );?>" class="btn btn-primary readmore pull-right">更多</a>
-
+	<?php endif; ?>
 <?php
 	wp_reset_postdata();
 }

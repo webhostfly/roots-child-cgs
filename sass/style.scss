@@ -28,6 +28,12 @@ body {
 	}
 }
 
+#content {
+	p {
+		text-indent: 2em;
+	}
+}
+
 .well-header {
 	padding: 10px;
 	margin-bottom: 10px;
@@ -52,6 +58,10 @@ body {
 			}
 		}
 	}
+}
+
+.sidebar {
+	padding: 8px 0;
 }
 
 .breadcrumb {

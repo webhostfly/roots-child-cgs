@@ -26,29 +26,39 @@ body {
   color: #005599;
 }
 
-/* line 31, sass/style.scss */
+/* line 32, sass/style.scss */
+#content p {
+  text-indent: 2em;
+}
+
+/* line 37, sass/style.scss */
 .well-header {
   padding: 10px;
   margin-bottom: 10px;
 }
-/* line 43, sass/style.scss */
+/* line 49, sass/style.scss */
 .well-header h1 {
   font-size: 20px;
   line-height: 1;
   margin: 0;
   padding: 0;
 }
-/* line 50, sass/style.scss */
+/* line 56, sass/style.scss */
 .well-header h1 a:hover {
   text-decoration: none;
 }
 
-/* line 57, sass/style.scss */
+/* line 63, sass/style.scss */
+.sidebar {
+  padding: 8px 0;
+}
+
+/* line 67, sass/style.scss */
 .breadcrumb {
   background-color: #eee;
 }
 
-/* line 62, sass/style.scss */
+/* line 72, sass/style.scss */
 footer p {
   font-size: x-small;
 }

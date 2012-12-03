@@ -41,24 +41,14 @@
                     <ul class="media-list">
                         <li class="media">
                             <a href="#" class="pull-left">
-                                <img src="http://dummyimage.com/64" alt="" class="media-object img-circle">
+                                <img src="http://www.bjcgs.com/wp-content/themes/cgs-dev/img/fwfc.jpg" alt="" class="media-object img-circle">
                             </a>
                             <div class="media-body">
-                                <h4 class="media-heading">水書新</h4>
-                                <p>說能性燈電說點</p>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <a href="#" class="pull-left">
-                                <img src="http://dummyimage.com/64" alt="" class="media-object img-circle">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">富金灣子吃分成們汽大小</h4>
-                                <p>一大會或大投關保適明合獎速母車容不小留先良的高後說子參本求中活事山見漸落位院取無歌中比馬天那道元一生</p>
+                                <h4 class="media-heading">王瑶</h4>
+                                <p>他巴資形美，苦在象失小之團，下相費星行來以次功了隨有。顯我離；親醫取己縣經小名主面度條檢智養土算功！長內天我流；要會定性量的結率開，造老興；</p>
                             </div>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-info pull-right">了解更多</a>
                 </div>
             </div>
 
