@@ -1,5 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php
+krumo($post);
   $subheading = get_post_meta( $post->ID, 'subheading', true );
 ?>
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
