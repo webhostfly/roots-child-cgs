@@ -35,20 +35,7 @@
                     <?php echo cgs_posts_list( "focus", 7 ); ?>
                 </div>
                 <div class="news span4">
-                    <div class="well well-header">
-                        <a href="#"><h1>CGS光荣榜</h1></a>
-                    </div>
-                    <ul class="media-list">
-                        <li class="media">
-                            <a href="#" class="pull-left">
-                                <img src="http://www.bjcgs.com/wp-content/themes/cgs-dev/img/fwfc.jpg" alt="" class="media-object img-circle">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">王瑶</h4>
-                                <p>他巴資形美，苦在象失小之團，下相費星行來以次功了隨有。顯我離；親醫取己縣經小名主面度條檢智養土算功！長內天我流；要會定性量的結率開，造老興；</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <?php get_template_part("templates/content", "star"); ?>
                 </div>
             </div>
 

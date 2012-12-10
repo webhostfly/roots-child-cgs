@@ -62,3 +62,12 @@ body {
 footer p {
   font-size: x-small;
 }
+
+/* line 79, sass/style.scss */
+.meta-control span {
+  float: left;
+}
+/* line 84, sass/style.scss */
+.meta-control .meta-info {
+  margin-left: 16px;
+}

@@ -1,19 +1,18 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php
-krumo($post);
   $subheading = get_post_meta( $post->ID, 'subheading', true );
 ?>
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <header class="row">
       <div class="span7 offset2">
-        <h1 class="entry-title">
+        <h2 class="entry-title">
           <?php the_title(); ?>
           <?php if (!empty($subheading)): ?>
-          <h1 class="pull-right">
+          <h2 class="pull-right">
             <small>——<?php echo $subheading; ?></small>
-          </h1>
+          </h2>
           <?php endif; ?>
-        </h1>
+        </h2>
       </div>
     </header>
     <div class="row">
@@ -24,12 +23,16 @@ krumo($post);
           </div>
           <div class="span7" id="content">
             <?php the_content(); ?>
+            <hr/>
+            <div class="editor-info pull-right">
+              <p>编辑：<?php echo get_the_author(); ?></p>
+            </div>
           </div>
         </div> <!-- entry-content -->
         <footer class="row">
-          <ul class="pager span9">
-            <li class="previous"><?php previous_post_link(); ?></li>
-            <li class="next"><?php next_post_link(); ?></li>
+          <ul class="pager span7 offset2">
+            <li class="previous"><?php previous_post_link('%link', '<i class="icon-step-backward"></i> %title'); ?></li>
+            <li class="next"><?php next_post_link('%link', '%title <i class="icon-step-forward"></i>'); ?></li>
           </ul>
         </footer>
       </div> <!-- left-column -->
