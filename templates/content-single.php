@@ -31,8 +31,8 @@
         </div> <!-- entry-content -->
         <footer class="row">
           <ul class="pager span7 offset2">
-            <li class="previous"><?php previous_post_link('%link', '<i class="icon-step-backward"></i> %title'); ?></li>
-            <li class="next"><?php next_post_link('%link', '%title <i class="icon-step-forward"></i>'); ?></li>
+            <li class="previous"><?php previous_post_link('%link', '<i class="icon-step-backward"></i> %title', true); ?></li>
+            <li class="next"><?php next_post_link('%link', '%title <i class="icon-step-forward"></i>', true); ?></li>
           </ul>
         </footer>
       </div> <!-- left-column -->

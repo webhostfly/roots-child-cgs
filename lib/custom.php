@@ -1,7 +1,5 @@
 <?php
 
-remove_filter( 'template_include', array('Roots_Wrapping', 'wrap'), 99 );
-
 function industrylink_permalink( $permalink, $post_id, $leavename ) {
 	$post = get_post( $post_id );
 
