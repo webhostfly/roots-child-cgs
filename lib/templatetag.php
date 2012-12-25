@@ -45,7 +45,7 @@ function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post", $re
 	<?php foreach ($posts as $post) : setup_postdata($post); ?>
 		<li>
 			<a href="<?php echo the_permalink(); ?>">
-				<span class="label pull-right"><?php echo the_time('m-d'); ?></span>
+				<span class="label pull-right"><?php echo the_time('m.d'); ?></span>
 				<?php echo the_title(); ?>
 			</a>
 		</li>
