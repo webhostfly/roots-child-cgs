@@ -17,57 +17,63 @@ body {
   font-size: x-small;
 }
 
-/* line 22, sass/style.scss */
+/* line 21, sass/style.scss */
+.news li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 25, sass/style.scss */
 .news li a {
   color: black;
 }
-/* line 24, sass/style.scss */
+/* line 27, sass/style.scss */
 .news li a:hover {
   color: #005599;
 }
 
-/* line 32, sass/style.scss */
+/* line 35, sass/style.scss */
 #content p {
   text-indent: 2em;
 }
 
-/* line 37, sass/style.scss */
+/* line 40, sass/style.scss */
 .well-header {
   padding: 10px;
   margin-bottom: 10px;
 }
-/* line 49, sass/style.scss */
+/* line 52, sass/style.scss */
 .well-header h1 {
   font-size: 20px;
   line-height: 1;
   margin: 0;
   padding: 0;
 }
-/* line 56, sass/style.scss */
+/* line 59, sass/style.scss */
 .well-header h1 a:hover {
   text-decoration: none;
 }
 
-/* line 63, sass/style.scss */
+/* line 66, sass/style.scss */
 .sidebar {
   padding: 8px 0;
 }
 
-/* line 67, sass/style.scss */
+/* line 70, sass/style.scss */
 .breadcrumb {
   background-color: #eee;
 }
 
-/* line 72, sass/style.scss */
+/* line 75, sass/style.scss */
 footer p {
   font-size: x-small;
 }
 
-/* line 79, sass/style.scss */
+/* line 82, sass/style.scss */
 .meta-control span {
   float: left;
 }
-/* line 84, sass/style.scss */
+/* line 87, sass/style.scss */
 .meta-control .meta-info {
   margin-left: 16px;
 }

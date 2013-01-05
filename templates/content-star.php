@@ -16,7 +16,7 @@
     <li class="media">
         <?php if ($rand_star->have_posts()): $rand_star->the_post(); ?>
         <a href="<?php echo the_permalink(); ?>" class="pull-left">
-            <?php echo get_the_post_thumbnail($rand_star->ID, "avator_small", array('class'=>"media-object img-circle")); ?>
+            <?php echo get_the_post_thumbnail($post->ID, "avator_small", array('class'=>"media-object img-circle")); ?>
         </a>
         <div class="media-body">
             <h4 class="media-heading">

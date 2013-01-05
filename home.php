@@ -3,11 +3,12 @@
         <?php get_template_part('templates/content', 'picnews'); ?>
     </div>
     <div class="news span4">
-        <?php echo cgs_posts_list( "cgsnews", 15 ); ?>
+        <?php echo cgs_posts_list( "cgsnews", 18 ); ?>
     </div>
 </div> <!-- headline -->
 
 <hr />
+
 <div id="main">
     <div class="row">
         <div class="news span4">
@@ -27,26 +28,22 @@
     <hr />
     <div class="row">
         <div class="tabbable span3">
-            <?php $cats = array("partynews", "team"); ?>
+            <?php $cats = array("partynews"); ?>
             <?php get_template_part("templates/content", "tabbable-news"); ?>
         </div>
         <div class="tabbable span3">
-            <?php $cats = array("depnews", "staff"); ?>
+            <?php $cats = array("depnews"); ?>
             <?php get_template_part("templates/content", "tabbable-news"); ?>
         </div>
         <div class="tabbable span3">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#" data-toggle="tab">工作汇报</a>
-                </li>
-            </ul>
-            <div class="tab-content news">
-                <div class="tab-pane active">
-                    <?php echo do_shortcode('[wpfilebase tag="list" id="1" tpl="ul" num="10" pagenav="0" /]'); ?>
-                </div>
-            </div>
-            
+            <?php $cats = array("team"); ?>
+            <?php get_template_part("templates/content", "tabbable-news"); ?>
         </div>
+        <div class="tabbable span3">
+            <?php $cats = array("staff"); ?>
+            <?php get_template_part("templates/content", "tabbable-news"); ?>
+        </div>
+
 
     </div> <!-- row -->
 </div> <!-- main -->
