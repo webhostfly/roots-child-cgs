@@ -60,4 +60,9 @@ function cgs_custom_columns($column, $post_id) {
 add_filter('manage_posts_columns', 'cgs_posts_columns');
 add_action('manage_posts_custom_column', 'cgs_custom_columns', 10, 2);
 
+function cgs_excerpt_length($length) {
+	return 200;
+}
+add_filter( 'excerpt_length', 'cgs_excerpt_length', 999 );
+
 ?>
