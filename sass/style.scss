@@ -12,6 +12,16 @@ $CZblue: #059;
 body {
 	background-color: whiteSmoke;
 }
+
+#header {
+	h1 {
+		background: url(assets/img/logo.png) no-repeat 0 0;
+		height: 48px;
+		line-height: 48px;
+		text-indent: 52px;
+	}
+}
+
 #links {
 	text-align: center;
 	font-size: x-small;
@@ -22,6 +32,8 @@ body {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		-ms-text-overflow: ellipsis;
+		margin-bottom: 5px;
 		a {
 			color: black;
 			&:hover {
@@ -40,22 +52,16 @@ body {
 .well-header {
 	padding: 10px;
 	margin-bottom: 10px;
-	// background-color: $CZblue;
-	// border: 1px solid shade($CZblue, 5%);
-
-	// &:hover {
-	// 	background-color: lighten($CZblue, 5%);
-	// }
-
-
 
 	h1 {
 		font-size: 20px;
 		line-height: 1;
 		margin: 0;
 		padding: 0;
+		color: black;
 
 		a {
+			color: black;
 			&:hover {
 				text-decoration: none;
 			}

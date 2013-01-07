@@ -1,30 +1,6 @@
 <?php
 
-// require_once locate_template('/lib/custom.php');
+require_once locate_template('/lib/custom.php');
 require_once locate_template('/lib/templatetag.php');
+require_once locate_template('/lib/columns.php');
 require_once locate_template('/lib/ie6.php');
-
-function cgs_setup() {
-	register_nav_menus( array(
-		'primary' => __( 'Primary Navigation', 'cgs' ),
-		'top' => __('Top Navigation', 'cgs')
-	) );
-
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 450, 300, true );
-	add_image_size( "slide", 770, 513, false );
-	add_image_size( "avator", 220, 9999, false );
-	add_image_size( "avator_small", 120, 9999, false );
-	add_image_size( '2_3_thumbnail', 100, 150, false );
-
-	add_editor_style('assets/css/custom-editor-style.css');
-}
-add_action( 'after_setup_theme', 'cgs_setup' );
-
-function cgs_scripts() {
-	wp_register_script('cgs_main', get_stylesheet_directory_uri() . '/assets/js/main.js', false, null, false);
-	wp_enqueue_script('cgs_main');
-}
-
-add_action('wp_enqueue_scripts', 'cgs_scripts', 101);
-?>

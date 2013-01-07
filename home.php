@@ -3,7 +3,7 @@
         <?php get_template_part('templates/content', 'picnews'); ?>
     </div>
     <div class="news span4">
-        <?php echo cgs_posts_list( "cgsnews", 18 ); ?>
+        <?php echo cgs_posts_list( "cgsnews", 14 ); ?>
     </div>
 </div> <!-- headline -->
 
@@ -18,7 +18,7 @@
             <?php echo cgs_posts_list_ul( "", 10, "industrylink" ); ?>
         </div>
         <div class="news span4">
-            <?php echo cgs_posts_list( "focus", 7 ); ?>
+            <?php echo cgs_posts_list( "focus", 10 ); ?>
         </div>
         <div class="news span4">
             <?php get_template_part("templates/content", "star"); ?>

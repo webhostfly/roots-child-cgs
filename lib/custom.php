@@ -1,68 +1,27 @@
 <?php
+function cgs_setup() {
+	register_nav_menus( array(
+		'primary' => __( 'Primary Navigation', 'cgs' ),
+		'top' => __('Top Navigation', 'cgs')
+	) );
 
-function industrylink_permalink( $permalink, $post_id, $leavename ) {
-	$post = get_post( $post_id );
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 450, 300, true );
+	add_image_size( "slide", 620, 413, false );
+	add_image_size( "avator", 220, 9999, false );
+	add_image_size( "avator_small", 120, 9999, false );
+	add_image_size( '2_3_thumbnail', 100, 150, false );
 
-	if ( $post->post_type == "industrylink" )
-		return esc_url(get_post_meta( $post->ID, 'link', true ));
-
-	return $permalink;
+	add_editor_style('assets/css/custom-editor-style.css');
 }
-add_filter( 'post_type_link', 'industrylink_permalink', 20, 3 );
+add_action( 'after_setup_theme', 'cgs_setup' );
 
-function cgs_posts_columns($columns) {
-	unset(
-		$columns['custom-fields'],
-		$columns['viewscolumn'],
-		$columns['tags'],
-		$columns['comments'],
-		$columns['author'],
-		$columns['categories'],
-		$columns['date']
-		);
-	$newColumns = array(
-		'author' => __('Editor'),
-		'categories' => __('Categories'),
-		'date' => __('Date'),
-		'real_author' => __('Author'),
-		'wordcount' => __('WordCount')
-		);
-	$columns = array_merge($columns, $newColumns);
-	return $columns;
+function cgs_scripts() {
+	wp_register_script('cgs_main', get_stylesheet_directory_uri() . '/assets/js/main.js', false, null, false);
+	wp_enqueue_script('cgs_main');
+	wp_dequeue_style( 'roots_bootstrap_responsive' );
+	wp_deregister_style('roots_bootstrap_responsive');	
 }
-
-function cgs_custom_columns($column, $post_id) {
-	// global $wpdb;
-	switch ( $column ) {
-	case 'real_author':
-		echo get_the_term_list( $post_id, 'author_tag', '', ', ', '' );
-		break;
-	case 'wordcount':
-		// $post = $wpdb->get_row(
-		// 	$wpdb->prepare(
-		// 		"
-		// 		SELECT post_content FROM $wpdb->posts WHERE {$wpdb->posts}.ID = %d;
-		// 		",
-		// 		$post_id
-		// 	)
-		// );
-		// $post_text = strip_shortcodes(strip_tags($post->post_content));
-
-		$post = get_post($post_id);
-		$post_text = strip_shortcodes(strip_tags($post->post_content));
-		echo mb_strlen($post_text);
-		break;
-	default:
-		break;
-	}
-}
-
-add_filter('manage_posts_columns', 'cgs_posts_columns');
-add_action('manage_posts_custom_column', 'cgs_custom_columns', 10, 2);
-
-function cgs_excerpt_length($length) {
-	return 200;
-}
-add_filter( 'excerpt_length', 'cgs_excerpt_length', 999 );
+add_action('wp_enqueue_scripts', 'cgs_scripts', 101);
 
 ?>
