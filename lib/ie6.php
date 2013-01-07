@@ -8,7 +8,7 @@ function bootstrape_ie6_head() { ?>
 
 function bootstrape_ie6_footer() { ?>
 	<!--[if IE 6]>
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/ie6.min.js" type="text/javascript"></script>
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/ie6.js" type="text/javascript"></script>
 	<![endif]-->
 <?php }
 

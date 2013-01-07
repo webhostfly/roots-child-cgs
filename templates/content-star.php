@@ -6,6 +6,11 @@
         'year' => date('Y'),
         'monthnum' => date('m'),
     );
+    $args_alt = array(
+        'category_name' => 'top',
+        'posts_per_page' => 1,
+        'orderby' => 'rand',
+    );
     $rand_star = new WP_Query($args);
 ?>
 
@@ -14,6 +19,12 @@
 </div>
 <ul class="media-list">
     <li class="media">
+<?php
+    $rand_star = new WP_Query($args);
+    if ( !($rand_star->have_posts()) ) {    //if do not have star this month then pick one from all.
+        $rand_star = new WP_Query($args_alt);
+    }
+?>
         <?php if ($rand_star->have_posts()): $rand_star->the_post(); ?>
         <a href="<?php echo the_permalink(); ?>" class="pull-left">
             <?php echo get_the_post_thumbnail($post->ID, "avator_small", array('class'=>"media-object img-circle")); ?>
