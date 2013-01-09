@@ -38,13 +38,14 @@ Follow variables are useable :
 		<!-- Thumbnails -->
 		<?php foreach ( $images as $image ) : ?>
 		
-		<li id="ngg-image-<?php echo $image->pid ?>" class="box" <?php echo $image->style ?> >
-			<div class="thumbnail" >
-				<a href="<?php echo $image->imageURL ?>" title="<?php echo $image->description ?>" <?php echo $image->thumbcode ?> >
-					<?php if ( !$image->hidden ) { ?>
-					<img title="<?php echo $image->alttext ?>" alt="<?php echo $image->alttext ?>" src="<?php echo $image->thumbnailURL ?>" <?php echo $image->size ?> />
-					<?php } ?>
-				</a>
+		<li id="ngg-image-<?php echo $image->pid ?>" class="box span3" <?php echo $image->style ?> >
+			<div class="thumbnail" >			
+				<?php if ( !$image->hidden ) { ?>
+					<a href="<?php echo $image->imageURL ?>" title="<?php echo $image->description ?>" <?php echo $image->thumbcode ?> >
+						<img title="<?php echo $image->alttext ?>" alt="<?php echo $image->alttext ?>" src="<?php echo $image->thumbnailURL ?>" <?php echo $image->size ?> />
+					</a>
+					<h6><?php echo $image->description ?></h6>
+				<?php } ?>
 			</div>
 		</li>
 	
