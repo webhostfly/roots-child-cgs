@@ -20,9 +20,11 @@ Follow variables are useable :
 
 	<li class="span3">
 		<div class="thumbnail">
-			<a href="<?php echo $gallery->pagelink ?>"><img alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/></a>
-			<p3><?php echo $gallery->title ?></p3>
-			<p><?php echo $gallery->galdesc ?></p>
+			<img alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/>
+			<div class="caption">
+				<h4><?php echo $gallery->title ?></h4>
+				<p><?php echo $gallery->galdesc ?></p>
+			</div>
 		</div>
 <!-- 		<div class="ngg-albumtitle"><a href="<?php echo $gallery->pagelink ?>"><?php echo $gallery->title ?></a></div>
 			<div class="ngg-albumcontent">
