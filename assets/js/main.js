@@ -9,4 +9,11 @@ $(function() {
 		}
 	);
 	$(".carousel").carousel();
+	
+	var $container = $('.thumbnails');
+	$container.imagesLoaded( function() {
+		$container.masonry({
+			itemSelector: '.box'
+		})
+	});
 });

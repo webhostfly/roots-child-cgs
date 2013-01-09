@@ -18,6 +18,12 @@ add_action( 'after_setup_theme', 'cgs_setup' );
 
 function cgs_scripts() {
 	wp_register_script('cgs_main', get_stylesheet_directory_uri() . '/assets/js/main.js', false, null, false);
+	wp_enqueue_script(
+		'cgs_masonry',
+		get_stylesheet_directory_uri() . '/assets/js/jquery.masonry.min.js',
+		array('jquery')
+	);
+
 	wp_enqueue_script('cgs_main');
 	wp_dequeue_style( 'roots_bootstrap_responsive' );
 	wp_deregister_style('roots_bootstrap_responsive');	

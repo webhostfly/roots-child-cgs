@@ -18,26 +18,16 @@ Follow variables are useable :
 	<!-- List of galleries -->
 	<?php foreach ($galleries as $gallery) : ?>
 
-	<li class="span3">
+	<li class="span3 box">
 		<div class="thumbnail">
-			<img alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/>
+			<a href="<?php echo $gallery->pagelink ?>"><img alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/></a>
 			<div class="caption">
-				<h4><?php echo $gallery->title ?></h4>
+				<a href="<?php echo $gallery->pagelink ?>">
+					<h4><?php echo $gallery->title ?></h4>
+				</a>
 				<p><?php echo $gallery->galdesc ?></p>
 			</div>
 		</div>
-<!-- 		<div class="ngg-albumtitle"><a href="<?php echo $gallery->pagelink ?>"><?php echo $gallery->title ?></a></div>
-			<div class="ngg-albumcontent">
-				<div class="ngg-thumbnail">
-					<a href="<?php echo $gallery->pagelink ?>"><img class="Thumb" alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/></a>
-				</div>
-				<div class="ngg-description">
-				<p><?php echo $gallery->galdesc ?></p>
-				<?php if ($gallery->counter > 0) : ?>
-				<p><strong><?php echo $gallery->counter ?></strong> <?php _e('Photos', 'nggallery') ?></p>
-				<?php endif; ?>
-			</div>
-		</div> -->
 	</li>
 
  	<?php endforeach; ?>
