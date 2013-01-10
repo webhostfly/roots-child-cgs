@@ -25,7 +25,6 @@ Follow variables are useable :
 				<a href="<?php echo $gallery->pagelink ?>">
 					<h4><?php echo $gallery->title ?></h4>
 				</a>
-				<p><?php echo $gallery->galdesc ?></p>
 			</div>
 		</div>
 	</li>
