@@ -13,6 +13,7 @@ function cgs_setup() {
 	add_image_size( '2_3_thumbnail', 100, 150, false );
 
 	add_editor_style('assets/css/custom-editor-style.css');
+	remove_action('template_redirect', 'roots_nice_search_redirect'); //fixed parent theme bug:redirect search.
 }
 add_action( 'after_setup_theme', 'cgs_setup' );
 
