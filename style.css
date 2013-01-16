@@ -92,3 +92,8 @@ footer p {
 .meta-control .meta-info {
   margin-left: 16px;
 }
+
+/* line 98, sass/style.scss */
+.caption {
+  text-align: center;
+}

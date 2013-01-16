@@ -24,6 +24,11 @@ function cgs_scripts() {
 		get_stylesheet_directory_uri() . '/assets/js/jquery.masonry.min.js',
 		array('jquery')
 	);
+	wp_enqueue_script(
+		'placeholder',
+		get_stylesheet_directory_uri() . '/assets/js/jquery.placeholder.min.js',
+		array('jquery')
+	);
 
 	wp_enqueue_script('cgs_main');
 	if ( is_home() ) {	//do not use responsive in homepage.

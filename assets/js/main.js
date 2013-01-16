@@ -1,4 +1,5 @@
 $(function() {
+	$('input[placeholder], textarea[placeholder]').placeholder();
 	$(".news .readmore").fadeTo("fast", 0);
 	$(".news").hover(
 		function() {
