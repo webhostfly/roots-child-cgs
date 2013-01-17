@@ -6,9 +6,7 @@
         </p>
     <![endif]-->
 
-    <?php if ( is_home() ) {
-        get_template_part('templates/nav', 'top');
-    } ?>
+    <?php get_template_part('templates/nav', 'top'); ?>
     
     <div class="container">
         <?php get_template_part('templates/header'); ?>

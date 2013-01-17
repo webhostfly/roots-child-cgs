@@ -9,6 +9,7 @@ Template:         roots
 @import "compass/css3/images";
 
 $CZblue: #059;
+$CGSlightblue: #b5d5ff;
 
 body {
 	background-color: whiteSmoke;
@@ -55,7 +56,7 @@ body {
 	padding: 10px;
 	margin-bottom: 10px;
 	@include background(linear-gradient(top, #008fd4, #195c8c));
-	background-color: #0d83c4;
+	background-color: $CZblue;
 
 	h1 {
 		font-size: 20px;
@@ -68,6 +69,19 @@ body {
 			color: white;
 			&:hover {
 				text-decoration: none;
+			}
+		}
+	}
+}
+
+ul.nav-tabs {
+	li.active {
+		a {
+			color: $CZblue;
+			background-color: $CGSlightblue;
+			&:hover {
+				color: $CZblue;
+				background-color: #91c0ff;
 			}
 		}
 	}
