@@ -6,11 +6,13 @@ Author:           Yuanl
 Author URI:       https://github.com/yuanl
 Template:         roots
 */
+@import "compass/css3/images";
 
 $CZblue: #059;
 
 body {
 	background-color: whiteSmoke;
+	background: url(assets/img/bodybg.jpg) repeat-x 0 42px;
 }
 
 #header {
@@ -52,16 +54,18 @@ body {
 .well-header {
 	padding: 10px;
 	margin-bottom: 10px;
+	@include background(linear-gradient(top, #008fd4, #195c8c));
+	background-color: #0d83c4;
 
 	h1 {
 		font-size: 20px;
 		line-height: 1;
 		margin: 0;
 		padding: 0;
-		color: black;
+		color: white;
 
 		a {
-			color: black;
+			color: white;
 			&:hover {
 				text-decoration: none;
 			}

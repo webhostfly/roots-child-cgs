@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse">
+<div class="navbar" id="topnavbar">
     <div class="navbar-inner">
         <a href="#" class="brand">北京南航地服</a>
         <?php wp_nav_menu(array('theme_location' => 'top', 'menu_class' => 'nav')); ?>
