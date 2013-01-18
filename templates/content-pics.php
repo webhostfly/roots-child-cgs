@@ -12,7 +12,7 @@
   			<li class="box span3">
   				<div class="thumbnail">
   					<a href="<?php echo $image_url[0]; ?>">
-  						<?php the_post_thumbnail("span3") ?>
+  						<?php the_post_thumbnail("thumb270") ?>
   					</a>
 					<h6><?php the_title() ?></h6>
   				</div>

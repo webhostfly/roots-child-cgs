@@ -26,9 +26,9 @@ Follow variables are useable :
 	<?php while ( $slides->have_posts() ) : $slides->the_post(); ?>
 	<li class="span3 box">
 		<div class="thumbnail">
-			<?php $cgs_gallery_link = get_page_link(get_page_by_title('cgs_gallery')->ID); ?>
+			<?php $cgs_gallery_link = get_page_link(get_page_by_title('cgs视窗')->ID); ?>
 			<a href="<?php echo $cgs_gallery_link; ?>">
-				<?php the_post_thumbnail("span3") ?>
+				<?php the_post_thumbnail("thumb270") ?>
 			</a>
 			<div class="caption">
 				<a href="<?php echo $cgs_gallery_link ?>">
