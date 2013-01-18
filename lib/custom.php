@@ -9,6 +9,7 @@ function cgs_setup() {
 	set_post_thumbnail_size( 450, 300, true );
 	add_image_size( "slide", 620, 413, false );
 	add_image_size( "avator", 220, 9999, false );
+	add_image_size( "span3", 270, 9999, false );
 	add_image_size( "avator_small", 120, 9999, false );
 	add_image_size( '2_3_thumbnail', 100, 150, false );
 
