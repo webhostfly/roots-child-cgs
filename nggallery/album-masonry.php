@@ -28,7 +28,7 @@ Follow variables are useable :
 		<div class="thumbnail">
 			<?php $cgs_gallery_link = get_page_link(get_page_by_title('cgs_gallery')->ID); ?>
 			<a href="<?php echo $cgs_gallery_link; ?>">
-				<?php the_post_thumbnail("avator") ?>
+				<?php the_post_thumbnail("span3") ?>
 			</a>
 			<div class="caption">
 				<a href="<?php echo $cgs_gallery_link ?>">
