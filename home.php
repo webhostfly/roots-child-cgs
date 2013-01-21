@@ -20,28 +20,24 @@
         <div class="news span4">
             <?php echo cgs_posts_list( "focus", 10 ); ?>
         </div>
-        <div class="span4">
+        <div class="news span4">
             <?php get_template_part("templates/content", "star"); ?>
         </div>
     </div>
 
     <hr />
     <div class="row">
-        <div class="tabbable span3">
-            <?php $cats = array("partynews"); ?>
-            <?php get_template_part("templates/content", "tabbable-news"); ?>
+        <div class="news span3">
+            <?php echo cgs_posts_list( "partynews", 10 ); ?>
         </div>
-        <div class="tabbable span3">
-            <?php $cats = array("depnews"); ?>
-            <?php get_template_part("templates/content", "tabbable-news"); ?>
+        <div class="news span3">
+            <?php echo cgs_posts_list( "depnews", 10 ); ?>
         </div>
-        <div class="tabbable span3">
-            <?php $cats = array("team"); ?>
-            <?php get_template_part("templates/content", "tabbable-news"); ?>
+        <div class="news span3">
+            <?php echo cgs_posts_list( "team", 10 ); ?>
         </div>
-        <div class="tabbable span3">
-            <?php $cats = array("staff"); ?>
-            <?php get_template_part("templates/content", "tabbable-news"); ?>
+        <div class="news span3">
+            <?php echo cgs_posts_list( "staff", 10 ); ?>
         </div>
 
 
