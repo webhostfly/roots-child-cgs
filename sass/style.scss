@@ -7,6 +7,7 @@ Author URI:       https://github.com/yuanl
 Template:         roots
 */
 @import "compass/css3/images";
+@import "compass/css3/text-shadow";
 
 $CZblue: #059;
 $CGSlightblue: #b5d5ff;
@@ -22,6 +23,7 @@ body {
 		height: 48px;
 		line-height: 48px;
 		text-indent: 52px;
+		@include text-shadow(0 3px 0 rgba(white, 0.3));
 	}
 }
 
