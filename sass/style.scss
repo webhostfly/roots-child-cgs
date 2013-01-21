@@ -8,6 +8,7 @@ Template:         roots
 */
 @import "compass/css3/images";
 @import "compass/css3/text-shadow";
+@import "compass/typography/text/ellipsis";
 
 $CZblue: #059;
 $CGSlightblue: #b5d5ff;
@@ -23,7 +24,7 @@ body {
 		height: 48px;
 		line-height: 48px;
 		text-indent: 52px;
-		@include text-shadow(0 3px 0 rgba(white, 0.3));
+		@include single-text-shadow(0, 3px, 0, false, rgba(white, 0.3));
 	}
 }
 
@@ -34,10 +35,7 @@ body {
 
 .news {
 	li {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		-ms-text-overflow: ellipsis;
+		@include ellipsis();
 		margin-bottom: 5px;
 		a {
 			color: black;
@@ -66,9 +64,11 @@ body {
 		margin: 0;
 		padding: 0;
 		color: white;
+		@include single-text-shadow(0, 1px, 0, false, rgba(black, 0.7));
 
 		a {
 			color: white;
+
 			&:hover {
 				text-decoration: none;
 			}
