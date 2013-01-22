@@ -6,28 +6,35 @@ Author:           Yuanl
 Author URI:       https://github.com/yuanl
 Template:         roots
 */
-/* line 16, sass/style.scss */
+/* line 17, sass/style.scss */
 body {
   background-color: whiteSmoke;
   background: url(assets/img/bodybg.jpg) repeat-x 0 42px;
 }
 
-/* line 22, sass/style.scss */
+/* line 23, sass/style.scss */
 #header h1 {
   background: url(assets/img/logo.png) no-repeat 0 0;
   height: 48px;
   line-height: 48px;
   text-indent: 52px;
-  text-shadow: 0 3px 0 rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 2px 2px rgba(87, 87, 87, 0.22);
 }
 
-/* line 31, sass/style.scss */
+/* line 32, sass/style.scss */
 #links {
   text-align: center;
   font-size: x-small;
 }
 
 /* line 37, sass/style.scss */
+#main_nav {
+  -webkit-box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.36);
+  -moz-box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.36);
+  box-shadow: 1px 2px 3px rgba(51, 51, 51, 0.36);
+}
+
+/* line 42, sass/style.scss */
 .news li {
   white-space: nowrap;
   overflow: hidden;
@@ -36,21 +43,21 @@ body {
   text-overflow: ellipsis;
   margin-bottom: 5px;
 }
-/* line 40, sass/style.scss */
+/* line 45, sass/style.scss */
 .news li a {
   color: black;
 }
-/* line 42, sass/style.scss */
+/* line 47, sass/style.scss */
 .news li a:hover {
   color: #005599;
 }
 
-/* line 50, sass/style.scss */
+/* line 55, sass/style.scss */
 #content p {
   text-indent: 2em;
 }
 
-/* line 55, sass/style.scss */
+/* line 60, sass/style.scss */
 .well-header {
   padding: 10px;
   margin-bottom: 10px;
@@ -61,7 +68,7 @@ body {
   background: linear-gradient(top, #008fd4, #195c8c);
   background-color: #005599;
 }
-/* line 61, sass/style.scss */
+/* line 66, sass/style.scss */
 .well-header h1 {
   font-size: 20px;
   line-height: 1;
@@ -70,56 +77,56 @@ body {
   color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
 }
-/* line 69, sass/style.scss */
+/* line 74, sass/style.scss */
 .well-header h1 a {
   color: white;
 }
-/* line 72, sass/style.scss */
+/* line 77, sass/style.scss */
 .well-header h1 a:hover {
   text-decoration: none;
 }
 
-/* line 81, sass/style.scss */
+/* line 86, sass/style.scss */
 ul.nav-tabs li.active a {
   color: #005599;
   background-color: #b5d5ff;
 }
-/* line 84, sass/style.scss */
+/* line 89, sass/style.scss */
 ul.nav-tabs li.active a:hover {
   color: #005599;
   background-color: #91c0ff;
 }
 
-/* line 92, sass/style.scss */
+/* line 97, sass/style.scss */
 .sidebar {
   padding: 8px 0;
 }
 
-/* line 96, sass/style.scss */
+/* line 101, sass/style.scss */
 .breadcrumb {
   background-color: #eee;
 }
 
-/* line 101, sass/style.scss */
+/* line 106, sass/style.scss */
 footer p {
   font-size: x-small;
 }
 
-/* line 108, sass/style.scss */
+/* line 113, sass/style.scss */
 .meta-control span {
   float: left;
 }
-/* line 113, sass/style.scss */
+/* line 118, sass/style.scss */
 .meta-control .meta-info {
   margin-left: 16px;
 }
 
-/* line 118, sass/style.scss */
+/* line 123, sass/style.scss */
 .thumbnail {
   background-color: white;
 }
 
-/* line 122, sass/style.scss */
+/* line 127, sass/style.scss */
 .caption {
   text-align: center;
 }

@@ -20,7 +20,7 @@
         <div class="news span4">
             <?php echo cgs_posts_list( "focus", 10 ); ?>
         </div>
-        <div class="news span4">
+        <div class="span4">
             <?php get_template_part("templates/content", "star"); ?>
         </div>
     </div>

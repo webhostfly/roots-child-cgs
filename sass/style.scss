@@ -7,6 +7,7 @@ Author URI:       https://github.com/yuanl
 Template:         roots
 */
 @import "compass/css3/images";
+@import "compass/css3/box-shadow";
 @import "compass/css3/text-shadow";
 @import "compass/typography/text/ellipsis";
 
@@ -24,13 +25,17 @@ body {
 		height: 48px;
 		line-height: 48px;
 		text-indent: 52px;
-		@include single-text-shadow(0, 3px, 0, false, rgba(white, 0.3));
+		@include single-text-shadow(1px, 2px, 2px, false, rgba(87, 87, 87, 0.22));
 	}
 }
 
 #links {
 	text-align: center;
 	font-size: x-small;
+}
+
+#main_nav {
+	@include single-box-shadow(rgba(51, 51, 51, 0.36), 1px, 2px, 3px);
 }
 
 .news {
