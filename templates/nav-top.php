@@ -3,7 +3,9 @@
 		<a href="#" class="brand">北京南航地服</a>
 		<?php wp_nav_menu(array('theme_location' => 'top', 'menu_class' => 'nav')); ?>
 
-		<a href="#suggest" class="btn btn-danger" role="button" data-toggle="modal">网站不好看？</a>
+		<a href="#suggest" class="btn btn-danger" role="button" data-toggle="modal">
+			<?php echo (is_home()) ?"网站不好看？":"报告问题"; ?>
+		</a>
 
 		<div id="suggest" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="suggestLabel" aria-hidden="true">
 			<div class="modal-header">
@@ -19,7 +21,7 @@
 				<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
 			</div>
 		</div>
-		
+		<script type="text/javascript"> $('input#suggest-url').val(window.location.href); </script>
 		<form action="http://www.bjcgs.com/staff/admin/index.asp?type=ck" class="navbar-form pull-right">
 			<input type="text" name="M_ID" class="input-small" placeholder="员工号">
 			<input type="password" name="pass" class="input-small" placeholder="密码">
