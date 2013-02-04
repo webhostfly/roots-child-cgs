@@ -51,6 +51,12 @@ body {
 	}
 }
 
+#piclinks {
+	li {
+		opacity: .3;
+	}
+}
+
 #content {
 	p {
 		text-indent: 2em;
@@ -60,7 +66,7 @@ body {
 .well-header {
 	padding: 10px;
 	margin-bottom: 10px;
-	@include background(linear-gradient(top, #008fd4, #195c8c));
+	@include background-image(linear-gradient(top,  white 0%,white 90%,$CZblue 90%,$CZblue 100%));
 	background-color: $CZblue;
 
 	h1 {
@@ -68,11 +74,11 @@ body {
 		line-height: 1;
 		margin: 0;
 		padding: 0;
-		color: white;
+		color: black;
 		@include single-text-shadow(0, 1px, 0, false, rgba(black, 0.7));
 
 		a {
-			color: white;
+			color: black;
 
 			&:hover {
 				text-decoration: none;
@@ -96,6 +102,10 @@ ul.nav-tabs {
 
 .sidebar {
 	padding: 8px 0;
+}
+
+.page-sidenav.affix {
+	top: 20px;
 }
 
 .breadcrumb {
