@@ -20,7 +20,6 @@
 <ul class="media-list">
     <li class="media">
 <?php
-    $rand_star = new WP_Query($args);
     if ( !($rand_star->have_posts()) ) {    //if do not have star this month then pick one from all.
         $rand_star = new WP_Query($args_alt);
     }
