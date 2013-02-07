@@ -26,10 +26,14 @@
     </div>
 
     <ul class="thumbnails row" id="piclinks">
-        <li class="span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/fxccdbt.jpg" alt="A380" class="thumbnail"></li>
-        <li class="span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/xxsbd.jpg" alt="学习十八大" class="thumbnail"></li>
-        <li class="span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/czzl.jpg" alt="成长之路" class="thumbnail"></li>
-        <li class="span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cgsyk.jpg" alt="CGS月刊" class="thumbnail"></li>
+        <li class="inactive span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/fxccdbt.jpg" alt="A380" class="thumbnail"></li>
+        <li class="inactive span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/xxsbd.jpg" alt="学习十八大" class="thumbnail"></li>
+        <li class="span3">
+            <a href="<?php echo get_category_link(7); ?>">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/czzl.jpg" alt="成长之路" class="thumbnail">
+            </a>
+        </li>
+        <li class="inactive span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cgsyk.jpg" alt="CGS月刊" class="thumbnail"></li>
     </ul>
 
     <hr />

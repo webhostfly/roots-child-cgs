@@ -52,7 +52,7 @@ body {
 }
 
 #piclinks {
-	li {
+	li.inactive {
 		opacity: .3;
 	}
 }
@@ -66,8 +66,10 @@ body {
 .well-header {
 	padding: 10px;
 	margin-bottom: 10px;
-	@include background-image(linear-gradient(top,  white 0%,white 90%,$CZblue 90%,$CZblue 100%));
-	background-color: $CZblue;
+	// @include background-image(linear-gradient(top,  white 0%,white 90%,$CZblue 90%,$CZblue 100%));
+	// background-color: $CZblue;
+	background-color: white;
+	background: url(assets/img/underscore.png) bottom repeat-x;
 
 	h1 {
 		font-size: 20px;

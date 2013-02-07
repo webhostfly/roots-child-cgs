@@ -53,7 +53,7 @@ body {
 }
 
 /* line 55, sass/style.scss */
-#piclinks li {
+#piclinks li.inactive {
   opacity: .3;
 }
 
@@ -66,14 +66,10 @@ body {
 .well-header {
   padding: 10px;
   margin-bottom: 10px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(90%, #ffffff), color-stop(90%, #005599), color-stop(100%, #005599));
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 90%, #005599 90%, #005599 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 90%, #005599 90%, #005599 100%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, #ffffff 90%, #005599 90%, #005599 100%);
-  background-image: linear-gradient(top, #ffffff 0%, #ffffff 90%, #005599 90%, #005599 100%);
-  background-color: #005599;
+  background-color: white;
+  background: url(assets/img/underscore.png) bottom repeat-x;
 }
-/* line 72, sass/style.scss */
+/* line 74, sass/style.scss */
 .well-header h1 {
   font-size: 20px;
   line-height: 1;
@@ -82,61 +78,61 @@ body {
   color: black;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
 }
-/* line 80, sass/style.scss */
+/* line 82, sass/style.scss */
 .well-header h1 a {
   color: black;
 }
-/* line 83, sass/style.scss */
+/* line 85, sass/style.scss */
 .well-header h1 a:hover {
   text-decoration: none;
 }
 
-/* line 92, sass/style.scss */
+/* line 94, sass/style.scss */
 ul.nav-tabs li.active a {
   color: #005599;
   background-color: #b5d5ff;
 }
-/* line 95, sass/style.scss */
+/* line 97, sass/style.scss */
 ul.nav-tabs li.active a:hover {
   color: #005599;
   background-color: #91c0ff;
 }
 
-/* line 103, sass/style.scss */
+/* line 105, sass/style.scss */
 .sidebar {
   padding: 8px 0;
 }
 
-/* line 107, sass/style.scss */
+/* line 109, sass/style.scss */
 .page-sidenav.affix {
   top: 20px;
 }
 
-/* line 111, sass/style.scss */
+/* line 113, sass/style.scss */
 .breadcrumb {
   background-color: #eee;
 }
 
-/* line 116, sass/style.scss */
+/* line 118, sass/style.scss */
 footer p {
   font-size: x-small;
 }
 
-/* line 123, sass/style.scss */
+/* line 125, sass/style.scss */
 .meta-control span {
   float: left;
 }
-/* line 128, sass/style.scss */
+/* line 130, sass/style.scss */
 .meta-control .meta-info {
   margin-left: 16px;
 }
 
-/* line 133, sass/style.scss */
+/* line 135, sass/style.scss */
 .thumbnail {
   background-color: white;
 }
 
-/* line 137, sass/style.scss */
+/* line 139, sass/style.scss */
 .caption {
   text-align: center;
 }
