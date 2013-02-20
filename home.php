@@ -24,16 +24,24 @@
             <?php get_template_part("templates/content", "star"); ?>
         </div>
     </div>
-
+<?php d(get_page_by_path("products/a380")) ?>
     <ul class="thumbnails row" id="piclinks">
-        <li class="inactive span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/fxccdbt.jpg" alt="A380" class="thumbnail"></li>
+        <li class="span3">
+            <a href="/index.php/products/a380">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/fxccdbt.jpg" alt="A380" class="thumbnail">
+            </a>
+        </li>
         <li class="inactive span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/xxsbd.jpg" alt="学习十八大" class="thumbnail"></li>
         <li class="span3">
             <a href="<?php echo get_category_link(7); ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/czzl.jpg" alt="成长之路" class="thumbnail">
             </a>
         </li>
-        <li class="inactive span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cgsyk.jpg" alt="CGS月刊" class="thumbnail"></li>
+        <li class="span3">
+            <a href="/index.php/briefing">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cgsyk.jpg" alt="CGS月刊" class="thumbnail">
+            </a>
+        </li>
     </ul>
 
     <hr />

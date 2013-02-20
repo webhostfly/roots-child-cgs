@@ -1,8 +1,9 @@
 
 <div class="row-fluid">
+	<?php $nav_depth = ($post->post_parent) ? 0 : 1 ?>
 	<ul class="span3 nav nav-list page-sidenav" data-spy="affix" data-offset-top="360">
 		<?php wp_list_pages( array( 
-			'depth' => 0,
+			'depth' => $nav_depth,
 			'sort_column' => 'menu_order',
 			'child_of' => $post->post_parent,
 			'title_li' => ''
