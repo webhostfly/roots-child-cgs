@@ -24,7 +24,7 @@
             <?php get_template_part("templates/content", "star"); ?>
         </div>
     </div>
-<?php d(get_page_by_path("products/a380")) ?>
+
     <ul class="thumbnails row" id="piclinks">
         <li class="span3">
             <a href="/index.php/products/a380">
