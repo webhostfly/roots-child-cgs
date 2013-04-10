@@ -11,7 +11,7 @@ $(function() {
 	);
 	$(".carousel").carousel();
 	
-	var $container = $('.thumbnails');
+	var $container = $('ul.pins');
 	$container.imagesLoaded( function() {
 		$container.masonry({
 			itemSelector: '.box'

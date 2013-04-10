@@ -9,7 +9,7 @@
     <?php get_template_part('templates/nav', 'top'); ?>
     
     <div class="container">
-        <?php get_template_part('templates/header'); ?>
+        <?php get_template_part('templates/header', $wp_query->query_vars["category_name"]); ?>
 
         <?php get_template_part('templates/nav', 'main'); ?>
 

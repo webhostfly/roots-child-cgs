@@ -3,7 +3,7 @@
 	<ul class="thumbnails">
 		<?php while (have_posts()) : the_post(); ?>
 		  <li class="box span3">
-		  	<div class="thumbnail">
+		  	<div class="thumbnail pins">
 		  		<a href="<?php the_permalink(); ?>">
 		  			<?php echo get_the_post_thumbnail($post->ID, "thumb270"); ?>
 		  		</a>

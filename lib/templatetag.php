@@ -1,16 +1,16 @@
 <?php
 
-function cgs_posts_list( $category_slug, $numberposts = 10, $post_type = "post" ) {
+function cgs_posts_list( $category_slug, $numberposts = 10, $post_type = "post", $html_class = "" ) {
 	$category = get_category_by_slug( $category_slug );
 	$category_id = $category->term_id;
 
-	cgs_posts_list_header( $category_id );
+	cgs_posts_list_header( $category_id, $html_class );
 	cgs_posts_list_ul( $category_id, $numberposts, $post_type );
 }
 
-function cgs_posts_list_header( $category_id ) {
+function cgs_posts_list_header( $category_id, $html_class = "" ) {
 ?>
-	<div class="well well-header">
+	<div class="well well-header <?php echo $html_class; ?>">
 		<h1>
 			<a href="<?php echo get_category_link( $category_id ); ?>">
 				<?php echo get_catname( $category_id ); ?>

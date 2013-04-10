@@ -5,7 +5,7 @@
 	  		"post_type" => "slide",
 	  		"numberposts" => 12
   		)); ?>
-  		<ul class="thumbnails">
+  		<ul class="thumbnails pins">
   		<?php foreach ( $posts as $post ) : setup_postdata($post); ?>
   			<?php if ( has_post_thumbnail() ) : ?>
   			<?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); ?>

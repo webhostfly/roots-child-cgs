@@ -2,8 +2,8 @@
     <div id="picnews" class="span8">
         <?php get_template_part('templates/content', 'picnews'); ?>
     </div>
-    <div class="news span4">
-        <?php echo cgs_posts_list( "cgsnews", 14 ); ?>
+    <div class="news span4" id="cgsnews">
+        <?php echo cgs_posts_list( "cgsnews", 18 ); ?>
     </div>
 </div> <!-- headline -->
 
@@ -21,17 +21,24 @@
             <?php echo cgs_posts_list( "focus", 10 ); ?>
         </div>
         <div class="span4">
+            <div class="well well-header">
+                <a href="#"><h1>CGS光荣榜</h1></a>
+            </div>
             <?php get_template_part("templates/content", "star"); ?>
         </div>
     </div>
 
-    <ul class="thumbnails row" id="piclinks">
+    <ul class="thumbnails" id="piclinks">
         <li class="span3">
             <a href="/index.php/products/a380">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/fxccdbt.jpg" alt="A380" class="thumbnail">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.jpg" alt="A380" class="thumbnail">
             </a>
         </li>
-        <li class="inactive span3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/xxsbd.jpg" alt="学习十八大" class="thumbnail"></li>
+        <li class="span3">
+            <a href="/index.php/category/cxzy">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/xxsbd.jpg" alt="学习十八大" class="thumbnail">
+            </a>
+        </li>
         <li class="span3">
             <a href="<?php echo get_category_link(7); ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/czzl.jpg" alt="成长之路" class="thumbnail">

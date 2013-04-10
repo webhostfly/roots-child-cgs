@@ -34,7 +34,7 @@ Follow variables are useable :
 	</div>
 <?php } ?>
 	
-	<ul class="thumbnails">
+	<ul class="thumbnails pins">
 		<!-- Thumbnails -->
 		<?php foreach ( $images as $image ) : ?>
 		

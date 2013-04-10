@@ -14,7 +14,7 @@ Follow variables are useable :
 ?>
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($galleries)) : ?>
 
-<ul class="thumbnails">	
+<ul class="thumbnails pins">	
 	<!-- For archive picnews. -->
 <?php
 	$args = array(

@@ -1,6 +1,6 @@
 <?php get_template_part( 'templates/nav', 'breadcrumb' ); ?>
 
-<div class="page-header">
+<div class="page-head">
   <h1>
     <?php
       if (is_home()) {

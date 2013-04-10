@@ -14,17 +14,15 @@
     $rand_star = new WP_Query($args);
 ?>
 
-<div class="well well-header">
-    <a href="#"><h1>CGS光荣榜</h1></a>
-</div>
 <ul class="media-list">
-    <li class="media">
+
 <?php
     if ( !($rand_star->have_posts()) ) {    //if do not have star this month then pick one from all.
         $rand_star = new WP_Query($args_alt);
     }
 ?>
-        <?php if ($rand_star->have_posts()): $rand_star->the_post(); ?>
+    <?php if ($rand_star->have_posts()): $rand_star->the_post(); ?>
+    <li class="media">
         <a href="<?php echo the_permalink(); ?>" class="pull-left">
             <?php echo get_the_post_thumbnail($post->ID, "avator_small", array('class'=>"media-object img-circle")); ?>
         </a>
@@ -38,6 +36,6 @@
         </div>
         <?php else: ?>
         <h4>本月尚未评选服务明星</h4>
-        <?php endif; ?>
     </li>
+    <?php endif; ?>
 </ul>
