@@ -1,6 +1,6 @@
 <?php
     $args = array(
-        'category_name' => 'top',
+        'category_name' => 'party-pioneer',
         'posts_per_page'    => 3,
         'orderby' => 'rand',
         'year' => date('Y'),

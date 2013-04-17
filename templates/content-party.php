@@ -11,10 +11,10 @@
 		text-shadow: 1px 2px 2px black;
 	}
 </style>
-<div class="row-fluid">
+<div class="row">
 	<div class="span8">
-		<div class="row-fluid">
-			<div class="span6 news">
+		<div class="row">
+			<div class="span4 news">
 				<div class="well well-header party">
 					<h1>组织介绍</h1>
 				</div>
@@ -25,20 +25,17 @@
 					?>
 				</div>
 			</div>
-			<div class="span6 news">
-				<?php cgs_posts_list("cxzy_news", 10, "post", "party"); ?>
+			<div class="span4 news">
+				<?php cgs_posts_list("party-18th", 10, "post", "party"); ?>
 			</div>
 		</div>
 		<hr />
-		<div class="row-fluid">
-			<div class="span6 news">
-				<?php cgs_posts_list("cxzy_news", 10, "post", "party"); ?>
+		<div class="row">
+			<div class="span4 news">
+				<?php cgs_posts_list("partynews", 10, "post", "party"); ?>
 			</div>
-			<div class="span6">
-				<div class="well well-header party">
-					<h1>入党导航</h1>
-				</div>
-				<img src="http://dummyimage.com/570" alt="">
+			<div class="span4">
+				<?php cgs_posts_list("party-join", 10, "post", "party"); ?>
 			</div>
 		</div>
 	</div>
@@ -52,30 +49,44 @@
 
 <hr />
 <div class="row">
-	<ul class="thumbnails pins">
-		<li class="span2"><a href="" class="thumbnail">
-				<img src="http://dummyimage.com/160x3:2" alt="">
-				<p>title1</p>
-			</a></li>
-		<li class="span2"><a href="" class="thumbnail">
-				<img src="http://dummyimage.com/160x3:2" alt="">
-				<p>title2</p>
-			</a></li>
-		<li class="span2"><a href="" class="thumbnail">
-				<img src="http://dummyimage.com/160x3:2" alt="">
-				<p>title3</p>
-			</a></li>
-		<li class="span2"><a href="" class="thumbnail">
-				<img src="http://dummyimage.com/160x3:2" alt="">
-				<p>title4</p>
-			</a></li>
-		<li class="span2"><a href="" class="thumbnail">
-				<img src="http://dummyimage.com/160x3:2" alt="">
-				<p>title5</p>
-			</a></li>
-		<li class="span2"><a href="" class="thumbnail">
-				<img src="http://dummyimage.com/160x3:2" alt="">
-				<p>title6</p>
-			</a></li>
-	</ul>
+	<div class="span12">
+		<ul class="thumbnails pins">
+			<li class="span2">
+				<a href="" class="thumbnail">
+					<img src="http://dummyimage.com/160x3:2" alt="">
+					<p>title1</p>
+				</a>
+			</li>
+			<li class="span2">
+				<a href="" class="thumbnail">
+					<img src="http://dummyimage.com/160x3:2" alt="">
+					<p>title2</p>
+				</a>
+			</li>
+			<li class="span2">
+				<a href="" class="thumbnail">
+					<img src="http://dummyimage.com/160x3:2" alt="">
+					<p>title3</p>
+				</a>
+			</li>
+			<li class="span2">
+				<a href="" class="thumbnail">
+					<img src="http://dummyimage.com/160x3:2" alt="">
+					<p>title4</p>
+				</a>
+			</li>
+			<li class="span2">
+				<a href="" class="thumbnail">
+					<img src="http://dummyimage.com/160x3:2" alt="">
+					<p>title5</p>
+				</a>
+			</li>
+			<li class="span2">
+				<a href="" class="thumbnail">
+					<img src="http://dummyimage.com/160x3:2" alt="">
+					<p>title6</p>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
