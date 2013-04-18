@@ -26,16 +26,16 @@
 				</div>
 			</div>
 			<div class="span4 news">
-				<?php cgs_posts_list("party-18th", 10, "post", "party"); ?>
+				<?php cgs_posts_list("party-join", 10, "post", "party"); ?>
 			</div>
 		</div>
 		<hr />
 		<div class="row">
 			<div class="span4 news">
-				<?php cgs_posts_list("partynews", 10, "post", "party"); ?>
+				<?php cgs_posts_list("party-18th", 10, "post", "party"); ?>
 			</div>
-			<div class="span4">
-				<?php cgs_posts_list("party-join", 10, "post", "party"); ?>
+			<div class="span4 news">
+				<?php cgs_posts_list("partynews", 10, "post", "party"); ?>
 			</div>
 		</div>
 	</div>
@@ -51,42 +51,13 @@
 <div class="row">
 	<div class="span12">
 		<ul class="thumbnails pins">
+			<?php foreach (array(26807, 26808, 26809, 26810, 26811, 26812) as $att_id): ?>
 			<li class="span2">
-				<a href="" class="thumbnail">
-					<img src="http://dummyimage.com/160x3:2" alt="">
-					<p>title1</p>
-				</a>
+				<div class="thumbnail">
+					<?php echo wp_get_attachment_image( $att_id, $size='img_span2', $icon = false ); ?>
+				</div>
 			</li>
-			<li class="span2">
-				<a href="" class="thumbnail">
-					<img src="http://dummyimage.com/160x3:2" alt="">
-					<p>title2</p>
-				</a>
-			</li>
-			<li class="span2">
-				<a href="" class="thumbnail">
-					<img src="http://dummyimage.com/160x3:2" alt="">
-					<p>title3</p>
-				</a>
-			</li>
-			<li class="span2">
-				<a href="" class="thumbnail">
-					<img src="http://dummyimage.com/160x3:2" alt="">
-					<p>title4</p>
-				</a>
-			</li>
-			<li class="span2">
-				<a href="" class="thumbnail">
-					<img src="http://dummyimage.com/160x3:2" alt="">
-					<p>title5</p>
-				</a>
-			</li>
-			<li class="span2">
-				<a href="" class="thumbnail">
-					<img src="http://dummyimage.com/160x3:2" alt="">
-					<p>title6</p>
-				</a>
-			</li>
+			<?php endforeach; ?>
 		</ul>
 	</div>
 </div>
