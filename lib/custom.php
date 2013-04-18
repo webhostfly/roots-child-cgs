@@ -12,6 +12,7 @@ function cgs_setup() {
 	add_image_size( "thumb270", 270, 9999, false );
 	add_image_size( "avator_small", 120, 9999, false );
 	add_image_size( '2_3_thumbnail', 100, 150, false );
+	add_image_size( 'img_span2', 160, 9999, false);
 
 	add_editor_style('assets/css/custom-editor-style.css');
 	remove_action('template_redirect', 'roots_nice_search_redirect'); //fixed parent theme bug:redirect search.
