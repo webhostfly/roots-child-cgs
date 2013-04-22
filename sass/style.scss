@@ -147,9 +147,15 @@ footer {
 			text-indent: -9999px;
 			height: 321px;
 			background: url(assets/img/party.jpg) 0 0;
+			@media (min-width: 768px) and (max-width: 979px) {
+				background: url(assets/img/party_724.jpg) 0 0;
+			}
 		}
 	}
 	.nav-breadcrumb { display:none; }
+	.news {
+		span.label { display:none; }
+	}
 }
 
 .well-header.party {

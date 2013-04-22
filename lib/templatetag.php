@@ -18,11 +18,6 @@ function cgs_posts_list_header( $category_id, $html_class = "" ) {
 		</h1>
 	</div>
 <?php
-	// $output = '';
-	// $output .= '<div class="well well-header">';
-	// $output .= '<a href="' . get_category_link( $category_id ) . '"><h1>' . get_catname( $category_id ) . '</h1></a></div>';
-
-	// return $output;
 }
 
 function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post", $readmore = true ) {
