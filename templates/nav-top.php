@@ -23,8 +23,8 @@
 		</div>
 		<script type="text/javascript"> $('input#suggest-url').val(window.location.href); </script>
 		<form action="http://www.bjcgs.com/staff/admin/index.asp?type=ck" class="navbar-form pull-right">
-			<input type="text" name="M_ID" class="input-small" placeholder="员工号">
-			<input type="password" name="pass" class="input-small" placeholder="密码">
+			<input type="text" name="M_ID" class="input-mini" placeholder="员工号">
+			<input type="password" name="pass" class="input-mini" placeholder="密码">
 			<button class="btn" type="submit">登陆</button>
 		</form>
 	</div>
