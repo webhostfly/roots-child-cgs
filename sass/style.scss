@@ -21,7 +21,7 @@ body {
 
 #topnavbar {
 	@media (max-width: 767px) {
-		ul#top_nav, a#suggest_btn {
+		ul#top_nav, a#suggest_btn, a.brand {
 			display: none;
 		}
 	}

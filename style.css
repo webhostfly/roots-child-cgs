@@ -14,7 +14,7 @@ body {
 
 @media (max-width: 767px) {
   /* line 24, sass/style.scss */
-  #topnavbar ul#top_nav, #topnavbar a#suggest_btn {
+  #topnavbar ul#top_nav, #topnavbar a#suggest_btn, #topnavbar a.brand {
     display: none;
   }
 }
