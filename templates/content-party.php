@@ -13,7 +13,11 @@
 				</div>
 			</div>
 			<div class="span4 news">
-				<?php cgs_posts_list("party-join", array('ul_class'=>'', 'date_label'=>false)); ?>
+				<?php cgs_posts_list_header('party-join'); ?>
+				<ul style="margin-bottom: 0;">
+					<li><a href="/static/cgs_impress/join_party_workflow.html" style="color:red;">入党流程图示</a></li>
+				</ul>
+				<?php cgs_posts_list_ul("party-join", array('ul_class'=>'', 'date_label'=>false)); ?>
 			</div>
 		</div>
 		<hr />

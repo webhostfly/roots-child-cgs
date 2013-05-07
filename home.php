@@ -15,7 +15,7 @@
             <div class="well well-header">
                 <h1>南航动态</h1>
             </div>
-            <?php echo cgs_posts_list_ul( "industrylink", array('numberposts'=>10, 'readmore'=>false) ); ?>
+            <?php echo cgs_posts_list_ul( "", array('post_type'=>'industrylink', 'numberposts'=>10, 'readmore'=>false) ); ?>
         </div>
         <div class="news span4">
             <?php echo cgs_posts_list( "focus", array('numberposts'=>10) ); ?>
@@ -35,7 +35,7 @@
             </a>
         </li>
         <li class="span3">
-            <a href="/index.php/category/cxzy">
+            <a href="/index.php/category/party">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/xxsbd.jpg" alt="学习十八大" class="thumbnail">
             </a>
         </li>
