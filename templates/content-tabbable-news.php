@@ -31,16 +31,13 @@ foreach ( $cats as $cat ) :
     foreach ( $cats as $cat ) :
         $tab_css_class = "tab-pane";
 
-        $category = get_category_by_slug( $cat );
-        $category_id = $category->term_id;
-
         if ( $first ) {
             $tab_css_class .= " active";
             $first = false;
         }
     ?>
     <div class="<?php echo $tab_css_class; ?>" id="<?php echo $cat; ?>">
-        <?php cgs_posts_list_ul($category_id, 10); ?>
+        <?php cgs_posts_list_ul($cat); ?>
     </div>
     <?php endforeach; ?>
 

@@ -8,7 +8,7 @@
 	<div class="span8">
 		<div class="row-fluid">
 			<div class="span6 news">
-				<?php cgs_posts_list("cxzy_news", 10, "post", "party"); ?>
+				<?php cgs_posts_list("cxzy_news" ); ?>
 			</div>
 			<div class="span6 news">
 				<div class="well well-header party">
@@ -19,7 +19,7 @@
 		</div>
 		<div class="row-fluid">
 			<div class="span6 news">
-				<?php cgs_posts_list("cxzy_story", 10, "post", "party"); ?>
+				<?php cgs_posts_list("cxzy_story"); ?>
 			</div>
 			<div class="span6">
 				<div class="well well-header party">

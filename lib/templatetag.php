@@ -1,16 +1,15 @@
 <?php
 
-function cgs_posts_list( $category_slug, $numberposts = 10, $post_type = "post", $html_class = "" ) {
-	$category = get_category_by_slug( $category_slug );
-	$category_id = $category->term_id;
-
-	cgs_posts_list_header( $category_id, $html_class );
-	cgs_posts_list_ul( $category_id, $numberposts, $post_type );
+function cgs_posts_list( $category_slug, $opts=array() ) {
+	cgs_posts_list_header( $category_slug );
+	cgs_posts_list_ul( $category_slug, $opts );
 }
 
-function cgs_posts_list_header( $category_id, $html_class = "" ) {
+function cgs_posts_list_header( $category_slug ) {
+	$category = get_category_by_slug( $category_slug );
+	$category_id = $category->term_id;
 ?>
-	<div class="well well-header <?php echo $html_class; ?>">
+	<div class="well well-header">
 		<h1>
 			<a href="<?php echo get_category_link( $category_id ); ?>">
 				<?php echo get_catname( $category_id ); ?>
@@ -20,7 +19,21 @@ function cgs_posts_list_header( $category_id, $html_class = "" ) {
 <?php
 }
 
-function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post", $readmore = true ) {
+function cgs_posts_list_ul( $category_slug, $opts=array() ) {
+	$fields = array(
+		'numberposts' => 10,
+		'post_type' => 'post',
+		'ul_class' => 'unstyled',
+		'date_label' => true,
+		'readmore' => true
+	);
+	foreach ($fields as $key => $default) {
+		$$key = isset($opts[$key]) ? $opts[$key] : $default;
+	}
+
+	$category = get_category_by_slug( $category_slug );
+	$category_id = $category->term_id;
+
 	$output = '';
 	$args = array(
 	    'numberposts'     => $numberposts,
@@ -36,11 +49,13 @@ function cgs_posts_list_ul( $category_id, $numberposts, $post_type = "post", $re
 	global $post;
 	$posts = get_posts( $args );
 ?>
-	<ul class="unstyled">
+	<ul class="<?php echo $ul_class; ?>">
 	<?php foreach ($posts as $post) : setup_postdata($post); ?>
 		<li>
 			<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title(); ?>">
-				<span class="label"><?php echo the_time('m.d'); ?></span>
+				<?php if ($date_label): ?>
+					<span class="label"><?php echo the_time('m.d'); ?></span>
+				<?php endif; ?>
 				<?php echo the_title(); ?>
 			</a>
 		</li>

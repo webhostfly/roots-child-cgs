@@ -2,7 +2,7 @@
 	<div class="span8">
 		<div class="row">
 			<div class="span4 news">
-				<div class="well well-header party">
+				<div class="well well-header">
 					<h1>组织介绍</h1>
 				</div>
 				<div class="div" id="content">
@@ -13,16 +13,16 @@
 				</div>
 			</div>
 			<div class="span4 news">
-				<?php cgs_posts_list("party-join", 10, "post", "party"); ?>
+				<?php cgs_posts_list("party-join", array('ul_class'=>'', 'date_label'=>false)); ?>
 			</div>
 		</div>
 		<hr />
 		<div class="row">
 			<div class="span4 news">
-				<?php cgs_posts_list("party-18th", 10, "post", "party"); ?>
+				<?php cgs_posts_list("party-18th", array('ul_class'=>'', 'date_label'=>false)); ?>
 			</div>
 			<div class="span4 news">
-				<?php cgs_posts_list("partynews", 10, "post", "party"); ?>
+				<?php cgs_posts_list("partynews", array('ul_class'=>'', 'date_label'=>false)); ?>
 			</div>
 		</div>
 	</div>

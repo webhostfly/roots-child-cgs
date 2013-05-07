@@ -166,15 +166,25 @@ footer {
 		}
 	}
 	.nav-breadcrumb { display:none; }
-	.news {
-		span.label { display:none; }
+	.well-header {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAAGzs1ytAAABCUlEQVQ4jaVVwRHEIAgkNuAnxWXSgTPW5dhROvBvBd7jgoOIgdzxOfSWzboQAyWGdu2+Xbtv27X75o8TAAAc0EBYiaEBJr1mglHExFxzAgAAf5xKRUfd4XCj5tRpthJDwwXGVF5zkpGOojDveqlWWolrf5xfBlzwnBc6CSRJqDmxHrAQDyI9UpK2lRga3aC//IBD97FBfD0MxMo6novtX40ErICqDOqtdFAnWTa5cO+LB1wxD3MoDdDQbm2AqByTz0jSJ196B9/myzmyFlpwonFPb6QVO1wCmgoMC15tCO+stR+PijkRVayRmzzmBBY73t0BRn9VK/7Jlx+oX8cNeaaL9ukBlv8w/wBuHA7HlqQAJgAAAABJRU5ErkJggg==);
+		h1, a {
+			color: white;
+		}
 	}
-}
-
-.well-header.party {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAAGzs1ytAAABCUlEQVQ4jaVVwRHEIAgkNuAnxWXSgTPW5dhROvBvBd7jgoOIgdzxOfSWzboQAyWGdu2+Xbtv27X75o8TAAAc0EBYiaEBJr1mglHExFxzAgAAf5xKRUfd4XCj5tRpthJDwwXGVF5zkpGOojDveqlWWolrf5xfBlzwnBc6CSRJqDmxHrAQDyI9UpK2lRga3aC//IBD97FBfD0MxMo6novtX40ErICqDOqtdFAnWTa5cO+LB1wxD3MoDdDQbm2AqByTz0jSJ196B9/myzmyFlpwonFPb6QVO1wCmgoMC15tCO+stR+PijkRVayRmzzmBBY73t0BRn9VK/7Jlx+oX8cNeaaL9ukBlv8w/wBuHA7HlqQAJgAAAABJRU5ErkJggg==);
-	h1, a {
-		color: white;
+	.news {
+		.well-header {
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAAGzs1ytAAABCUlEQVQ4jaVVwRHEIAgkNuAnxWXSgTPW5dhROvBvBd7jgoOIgdzxOfSWzboQAyWGdu2+Xbtv27X75o8TAAAc0EBYiaEBJr1mglHExFxzAgAAf5xKRUfd4XCj5tRpthJDwwXGVF5zkpGOojDveqlWWolrf5xfBlzwnBc6CSRJqDmxHrAQDyI9UpK2lRga3aC//IBD97FBfD0MxMo6novtX40ErICqDOqtdFAnWTa5cO+LB1wxD3MoDdDQbm2AqByTz0jSJ196B9/myzmyFlpwonFPb6QVO1wCmgoMC15tCO+stR+PijkRVayRmzzmBBY73t0BRn9VK/7Jlx+oX8cNeaaL9ukBlv8w/wBuHA7HlqQAJgAAAABJRU5ErkJggg==);
+			h1, a {
+				color: white;
+			}
+		}
+		ul li {
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUHBiocSKT+TQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC0SURBVCjP3dDBSoJRFMTx36c3o1CDICIoUoR2gq9Qz98icGG0SgqDhEIUwShtM8FHj+BZnTvzh3Nn2KOp/u1NNPLe4ge7OljhGGc4ibbAHGvsqkAdDDHCVcAXPGCMZUFBD3e4xWXAV5xiiUnJyXP0Mch5OMRzvGmJeIRuzIMa2I2nJN0nZvgIIPss3raJ79TSQQsbvOMR9wk0/6unhWvc4CLaG54wxVe98AbaCSf9rfK1/ZpfD3QmFNcshIIAAAAASUVORK5CYII=);
+			background-repeat: no-repeat;
+			padding-left: 15px;
+			margin-left: -20px;
+		}
 	}
 }
 

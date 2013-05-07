@@ -3,7 +3,7 @@
         <?php get_template_part('templates/content', 'picnews'); ?>
     </div>
     <div class="news span4" id="cgsnews">
-        <?php echo cgs_posts_list( "cgsnews", 18 ); ?>
+        <?php echo cgs_posts_list( "cgsnews", array('numberposts'=>18) ); ?>
     </div>
 </div> <!-- headline -->
 
@@ -15,10 +15,10 @@
             <div class="well well-header">
                 <h1>南航动态</h1>
             </div>
-            <?php echo cgs_posts_list_ul( "", 10, "industrylink" ); ?>
+            <?php echo cgs_posts_list_ul( "industrylink", array('numberposts'=>10, 'readmore'=>false) ); ?>
         </div>
         <div class="news span4">
-            <?php echo cgs_posts_list( "focus", 10 ); ?>
+            <?php echo cgs_posts_list( "focus", array('numberposts'=>10) ); ?>
         </div>
         <div class="span4">
             <div class="well well-header">
@@ -54,16 +54,16 @@
     <hr />
     <div class="row">
         <div class="news span3">
-            <?php echo cgs_posts_list( "partynews", 10 ); ?>
+            <?php echo cgs_posts_list( "partynews" ); ?>
         </div>
         <div class="news span3">
-            <?php echo cgs_posts_list( "depnews", 10 ); ?>
+            <?php echo cgs_posts_list( "depnews" ); ?>
         </div>
         <div class="news span3">
-            <?php echo cgs_posts_list( "team", 10 ); ?>
+            <?php echo cgs_posts_list( "team" ); ?>
         </div>
         <div class="news span3">
-            <?php echo cgs_posts_list( "staff", 10 ); ?>
+            <?php echo cgs_posts_list( "staff" ); ?>
         </div>
 
 
