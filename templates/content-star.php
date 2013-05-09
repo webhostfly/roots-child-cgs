@@ -32,7 +32,7 @@
                     <?php echo the_title(); ?>
                 </a>
             </h4>
-            <p><?php echo apply_filters('the_excerpt', mb_substr(strip_shortcodes(strip_tags($post->post_content)), 0, 64, 'utf-8') . '……') ?></p>
+            <p><?php echo apply_filters('the_excerpt', mb_substr(strip_shortcodes(strip_tags($post->post_content)), 0, 80, 'utf-8') . '……') ?></p>
         </div>
         <?php else: ?>
         <h4>本月尚未评选服务明星</h4>
