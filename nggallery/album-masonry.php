@@ -14,36 +14,11 @@ Follow variables are useable :
 ?>
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($galleries)) : ?>
 
-<ul class="thumbnails pins">	
-	<!-- For archive picnews. -->
-<?php
-	$args = array(
-		"post_type" => "slide",
-		"posts_per_page" => 1
-	); 
-	$slides = new WP_Query( $args );
-?>
-	<?php while ( $slides->have_posts() ) : $slides->the_post(); ?>
-	<li class="span3 box">
-		<div class="thumbnail">
-			<?php $cgs_gallery_link = get_page_link(get_page_by_title('cgs视窗')->ID); ?>
-			<a href="<?php echo $cgs_gallery_link; ?>">
-				<?php the_post_thumbnail("thumb270") ?>
-			</a>
-			<div class="caption">
-				<a href="<?php echo $cgs_gallery_link ?>">
-					<h4>CGS视窗</h4>
-				</a>
-			</div>
-		</div>
-	</li>
-	<?php endwhile; ?>
-	
-	<!-- List of galleries -->
+<div class="pins">
 	<?php foreach ($galleries as $gallery) : ?>
 
-	<li class="span3 box">
-		<div class="thumbnail">
+	<div class="pin_wrapper">
+		<div class="pin_thumbnail">
 			<a href="<?php echo $gallery->pagelink ?>"><img alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/></a>
 			<div class="caption">
 				<a href="<?php echo $gallery->pagelink ?>">
@@ -51,13 +26,13 @@ Follow variables are useable :
 				</a>
 			</div>
 		</div>
-	</li>
+	</div>
 
  	<?php endforeach; ?>
  	
 	<!-- Pagination -->
  	<?php echo $pagination ?>
  	
-</ul>
+</div>
 
 <?php endif; ?>

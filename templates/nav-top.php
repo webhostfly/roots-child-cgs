@@ -1,6 +1,6 @@
 <div class="navbar" id="topnavbar">
 	<div class="navbar-inner">
-		<a href="#" class="brand">北京南航地服</a>
+		<a href="/" class="brand">北京南航地服</a>
 		<?php wp_nav_menu(array('theme_location' => 'top', 'menu_class' => 'nav', 'menu_id' => 'top_nav')); ?>
 
 		<a href="#suggest" class="btn btn-danger" role="button" data-toggle="modal" id="suggest_btn">

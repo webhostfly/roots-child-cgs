@@ -34,12 +34,12 @@ Follow variables are useable :
 	</div>
 <?php } ?>
 	
-	<ul class="thumbnails pins">
+	<div class="pins">
 		<!-- Thumbnails -->
 		<?php foreach ( $images as $image ) : ?>
 		
-		<li id="ngg-image-<?php echo $image->pid ?>" class="box span3" <?php echo $image->style ?> >
-			<div class="thumbnail" >			
+		<div id="ngg-image-<?php echo $image->pid ?>" class="pin_wrapper" <?php echo $image->style ?> >
+			<div class="pin_thumbnail" >			
 				<?php if ( !$image->hidden ) { ?>
 					<a href="<?php echo $image->imageURL ?>" title="<?php echo $image->description ?>" <?php echo $image->thumbcode ?> >
 						<img title="<?php echo $image->alttext ?>" alt="<?php echo $image->alttext ?>" src="<?php echo $image->thumbnailURL ?>" <?php echo $image->size ?> />
@@ -47,7 +47,7 @@ Follow variables are useable :
 					<h6><?php echo $image->description ?></h6>
 				<?php } ?>
 			</div>
-		</li>
+		</div>
 	
 		<?php if ( $image->hidden ) continue; ?>
 		<?php if ( $gallery->columns > 0 && ++$i % $gallery->columns == 0 ) { ?>
@@ -55,7 +55,7 @@ Follow variables are useable :
 		<?php } ?>
 
 	 	<?php endforeach; ?>
- 	</ul>
+ 	</div>
  	
 	<!-- Pagination -->
  	<?php echo $pagination ?>

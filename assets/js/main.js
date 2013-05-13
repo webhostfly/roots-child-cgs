@@ -10,11 +10,25 @@ $(function() {
 		}
 	);
 	$(".carousel").carousel();
-	
-	var $container = $('ul.pins');
+
+	var $container = $('.pins');
 	$container.imagesLoaded( function() {
 		$container.masonry({
-			itemSelector: '.box'
-		})
+			itemSelector: '.pin_wrapper',
+			// columnWidth: 270,
+			isAnimated: true,
+			isResizable: true
+		});
+	});
+	$container.infinitescroll({
+		navSelector: '.ngg-navigation',
+		nextSelector: '.ngg-navigation .next',
+		itemSelector: '.pin_wrapper'
+	},function ( newElements ) {
+		var $newElems = $(newElements).css({opacity: 0});
+		$newElems.imagesLoaded(function() {
+			$newElems.animate({ opacity: 1 });
+			$container.masonry( 'appended', $newElems, true );
+		});
 	});
 });

@@ -8,6 +8,7 @@ Template:         roots
 */
 @import "compass/css3/images";
 @import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
 @import "compass/css3/text-shadow";
 @import "compass/typography/text/ellipsis";
 
@@ -149,6 +150,21 @@ footer {
 	background-color: white;
 }
 
+.pin_wrapper {
+	width: 270px;
+	margin: 14px 7px 0px 7px;
+	@include border-radius(3px);
+	.pin_thumbnail {
+		@include box-shadow(0 1px 3px 0 rgba(0,0,0,0.33));
+		img {
+			@include border-radius(3px 3px 0 0 );
+		}
+		h6 {
+			padding: 0 14px;
+		}
+	}
+}
+
 .caption {
 	text-align: center;
 }
@@ -191,6 +207,10 @@ footer {
 #cgsnews ul {
 	overflow: hidden;
 	height: 350px;
+}
+
+a.block {
+	display: block;
 }
 
 /* media querys */
