@@ -64,15 +64,13 @@
 <hr />
 <div class="row">
 	<div class="span12">
-		<ul class="thumbnails">
-			<?php foreach ( array(26807, 26808, 26809, 26810, 26811, 26812) as $att_id ): ?>
-			<li class="span2">
-				<div class="thumbnail">
-					<?php echo wp_get_attachment_image( $att_id, $size='img_span2', $icon = false ); ?>
-				</div>
-			</li>
-			<?php endforeach; ?>
-		</ul>
+		<?php foreach ( array(26807, 26808, 26809, 26810, 26811) as $att_id ): ?>
+		<div class="" style="width: 180px; float: left; margin-left: 8px;">
+			<div class="thumbnail">
+				<?php echo wp_get_attachment_image( $att_id, $size='avator', $icon = false ); ?>
+			</div>
+		</div>
+		<?php endforeach; ?>
 	</div>
 </div>
 <script>
