@@ -15,7 +15,7 @@
 			<div class="span4 news">
 				<?php cgs_posts_list_header('party-join'); ?>
 				<ul style="margin-bottom: 0;">
-					<li><a href="/static/cgs_impress/join_party_workflow.html" style="color:red;">入党流程图示<i class="icon-flag"></i></a></li>
+					<li><a href="/static/cgs_impress/join_party_workflow.html" style="color:red;">入党流程图示<i class="icon-facetime-video"></i></a></li>
 				</ul>
 				<?php cgs_posts_list_ul("party-join", array('numberposts'=>9, 'ul_class'=>'', 'date_label'=>false)); ?>
 			</div>
