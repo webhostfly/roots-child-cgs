@@ -17,7 +17,7 @@
 				<ul style="margin-bottom: 0;">
 					<li><a href="/static/cgs_impress/join_party_workflow.html" style="color:red;">入党流程图示<i class="icon-flag"></i></a></li>
 				</ul>
-				<?php cgs_posts_list_ul("party-join", array('numberposts'=>8, 'ul_class'=>'', 'date_label'=>false)); ?>
+				<?php cgs_posts_list_ul("party-join", array('numberposts'=>9, 'ul_class'=>'', 'date_label'=>false)); ?>
 			</div>
 		</div>
 
@@ -88,12 +88,12 @@
 				}
 			});
 			$('#party_pioneer').foldIt({
-				'height': 556
+				'height': 588
 			});
 		});
 
 		$('#party_intro').foldIt({
-			'height': 305
+			'height': 345
 		});
 		// $('#party_pioneer').foldIt({
 		// 	'height': 400
