@@ -22,7 +22,7 @@ Follow variables are useable :
 			<a href="<?php echo $gallery->pagelink ?>"><img alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/></a>
 			<div class="caption">
 				<a href="<?php echo $gallery->pagelink ?>">
-					<h4><?php echo $gallery->title ?></h4>
+					<h6><?php echo $gallery->title ?></h6>
 				</a>
 			</div>
 		</div>

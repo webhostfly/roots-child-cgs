@@ -41,7 +41,7 @@ Follow variables are useable :
 		<div id="ngg-image-<?php echo $image->pid ?>" class="pin_wrapper" <?php echo $image->style ?> >
 			<div class="pin_thumbnail" >			
 				<?php if ( !$image->hidden ) { ?>
-					<a href="<?php echo $image->imageURL ?>" title="<?php echo $image->description ?>" <?php echo $image->thumbcode ?> >
+					<a class="block" href="<?php echo $image->imageURL ?>" title="<?php echo $image->description ?>" <?php echo $image->thumbcode ?> >
 						<img title="<?php echo $image->alttext ?>" alt="<?php echo $image->alttext ?>" src="<?php echo $image->thumbnailURL ?>" <?php echo $image->size ?> />
 					</a>
 					<h6><?php echo $image->description ?></h6>

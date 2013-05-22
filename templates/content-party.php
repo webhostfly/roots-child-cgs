@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="span8">
 		<div class="row">
-			<div class="span4 news">
+			<div class="span4 news" id="party_intro">
 				<div class="well well-header">
 					<h1>组织介绍</h1>
 				</div>
@@ -17,10 +17,10 @@
 				<ul style="margin-bottom: 0;">
 					<li><a href="/static/cgs_impress/join_party_workflow.html" style="color:red;">入党流程图示<i class="icon-flag"></i></a></li>
 				</ul>
-				<?php cgs_posts_list_ul("party-join", array('numberposts'=>13, 'ul_class'=>'', 'date_label'=>false)); ?>
+				<?php cgs_posts_list_ul("party-join", array('numberposts'=>8, 'ul_class'=>'', 'date_label'=>false)); ?>
 			</div>
 		</div>
-		<hr />
+
 		<div class="row">
 			<div class="span4 news">
 				<?php cgs_posts_list("party-18th", array('numberposts'=>8, 'ul_class'=>'', 'date_label'=>false)); ?>
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="span4" id="party_pioneer">
 		<div class="well well-header party">
 			<h1>党员先锋岗</h1>
 		</div>
@@ -38,35 +38,65 @@
 		<?php 
 		$args = array(
 			'post_type' => 'attachment',
-			'post__in' => array('26816', '26817', '26818', '26819', '26820', '26821', '26822', '26823', '26824', '26825'),
-			// 'post__in' => array('26507', '26508'),
+			'numberposts' => -1,
+			'post_status' => null,
+			'post_parent' => $intro->ID
 			);
 		$pioneers = get_posts($args);
 		?>
-		<?php foreach ($pioneers as $pioneer): ?>
-		<div class="media">
-			<div class="pull-left">
-				<?php echo wp_get_attachment_image( $pioneer->ID, $size = '2_3_thumbnail', $icon = false, $attr = 'class="media-object thumbnail"' ); ?>
-			</div>
-			<div class="media-body">
-				<h4><?php echo apply_filters( 'the_title', $pioneer->post_title ); ?></h4>
+		<div class="row">
+			<div class="party_pins">
+				<?php foreach ($pioneers as $pioneer): ?>
+				<div class="pin_thumbnail span2">
+					<div class="thumbnail">
+						<?php echo wp_get_attachment_image( $pioneer->ID, $size = 'img_span2', $icon = false, $attr = 'class="media-object thumbnail"' ); ?>
+						<h6><?php echo apply_filters( 'the_title', $pioneer->post_title ); ?></h6>
+					</div>
+					
+				</div>
+				<?php endforeach; ?>
+
 			</div>
 		</div>
-		<?php endforeach; ?>
 	</div>
 </div>
 
 <hr />
 <div class="row">
 	<div class="span12">
-		<ul class="thumbnails">
+		<div class="thumbnails">
 			<?php foreach ( array(26807, 26808, 26809, 26810, 26811, 26812) as $att_id ): ?>
-			<li class="span2">
+			<div class="span2">
 				<div class="thumbnail">
 					<?php echo wp_get_attachment_image( $att_id, $size='img_span2', $icon = false ); ?>
 				</div>
-			</li>
+			</div>
 			<?php endforeach; ?>
-		</ul>
+		</div>
 	</div>
 </div>
+<script>
+	$(function() {
+		var $container = $('.party_pins');
+		$container.imagesLoaded( function() {
+			$container.masonry({
+				itemSelector: '.pin_thumbnail',
+				isAnimated: true,
+				isResizable: true,
+				columnWidth: function() {
+					return $container.width() / 2;
+				}
+			});
+			$('#party_pioneer').foldIt({
+				'height': 556
+			});
+		});
+
+		$('#party_intro').foldIt({
+			'height': 305
+		});
+		// $('#party_pioneer').foldIt({
+		// 	'height': 400
+		// });
+	})
+</script>

@@ -150,20 +150,28 @@ footer {
 	background-color: white;
 }
 
-.pin_wrapper {
-	width: 270px;
-	margin: 14px 7px 0px 7px;
-	@include border-radius(3px);
-	.pin_thumbnail {
-		@include box-shadow(0 1px 3px 0 rgba(0,0,0,0.33));
-		img {
-			@include border-radius(3px 3px 0 0 );
-		}
-		h6 {
-			padding: 0 14px;
+.pins {
+	.pin_wrapper {
+		// width: 270px;
+		margin: 14px 7px 0px 7px;
+		@include border-radius(3px);
+		.pin_thumbnail {
+			width: 270px;
+			background-color: rgba(255, 255, 223, 0.85);
+			@include box-shadow(0 1px 3px 0 rgba(0,0,0,0.33));
+			img {
+				@include border-radius(3px 3px 0 0 );
+				margin-bottom: 3px;
+			}
+
 		}
 	}
+	h6 {
+		padding: 0 14px 3px 14px;
+		margin: 0;
+	}
 }
+
 
 .caption {
 	text-align: center;
