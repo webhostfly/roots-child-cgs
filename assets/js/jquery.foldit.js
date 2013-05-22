@@ -9,7 +9,6 @@
 				'position': 'relative',
 				'overflow': 'hidden'
 			}).data('height_orig', $container.height());
-			console.log($container.height());
 
 			var $unFoldBtn = $('<button class="btn btn-block btn-mini" type="button"></button>');
 			$unFoldBtn.html('<i class="icon-chevron-down"></i>').css({

@@ -64,15 +64,15 @@
 <hr />
 <div class="row">
 	<div class="span12">
-		<div class="thumbnails">
+		<ul class="thumbnails">
 			<?php foreach ( array(26807, 26808, 26809, 26810, 26811, 26812) as $att_id ): ?>
-			<div class="span2">
+			<li class="span2">
 				<div class="thumbnail">
 					<?php echo wp_get_attachment_image( $att_id, $size='img_span2', $icon = false ); ?>
 				</div>
-			</div>
+			</li>
 			<?php endforeach; ?>
-		</div>
+		</ul>
 	</div>
 </div>
 <script>
