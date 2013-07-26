@@ -46,6 +46,10 @@ function cgs_scripts() {
 	// 	wp_dequeue_style( 'roots_bootstrap_responsive' );
 	// 	wp_deregister_style('roots_bootstrap_responsive');
 	// }
+	wp_enqueue_style(
+		'jquery_accordion',
+		get_stylesheet_directory_uri() . '/assets/css/accordionImageMenu.css'
+		);
 }
 add_action('wp_enqueue_scripts', 'cgs_scripts', 101);
 
