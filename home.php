@@ -15,10 +15,10 @@
             <div class="well well-header">
                 <h1>南航动态</h1>
             </div>
-            <?php echo cgs_posts_list_ul( "", array('post_type'=>'industrylink', 'numberposts'=>10, 'readmore'=>false) ); ?>
+            <?php echo cgs_posts_list_ul( "", array('post_type'=>'industrylink', 'numberposts'=>5, 'readmore'=>false) ); ?>
         </div>
         <div class="news span4">
-            <?php echo cgs_posts_list( "focus", array('numberposts'=>10) ); ?>
+            <?php echo cgs_posts_list( "focus", array('numberposts'=>5) ); ?>
         </div>
         <div class="span4">
             <div class="well well-header">
@@ -54,16 +54,16 @@
     <hr />
     <div class="row">
         <div class="news span3">
-            <?php echo cgs_posts_list( "partynews" ); ?>
+            <?php echo cgs_posts_list( "partynews", array('numberposts'=>5) ); ?>
         </div>
         <div class="news span3">
-            <?php echo cgs_posts_list( "depnews" ); ?>
+            <?php echo cgs_posts_list( "depnews", array('numberposts'=>5) ); ?>
         </div>
         <div class="news span3">
-            <?php echo cgs_posts_list( "team" ); ?>
+            <?php echo cgs_posts_list( "team", array('numberposts'=>5) ); ?>
         </div>
         <div class="news span3">
-            <?php echo cgs_posts_list( "staff" ); ?>
+            <?php echo cgs_posts_list( "staff", array('numberposts'=>5) ); ?>
         </div>
 
 

@@ -24,7 +24,7 @@ function cgs_posts_list_ul( $category_slug, $opts=array() ) {
 		'numberposts' => 10,
 		'post_type' => 'post',
 		'ul_class' => 'unstyled',
-		'date_label' => true,
+		'date_label' => false,
 		'readmore' => true
 	);
 	foreach ($fields as $key => $default) {
