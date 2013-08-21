@@ -10,23 +10,6 @@
 <hr />
 
 <div id="main">
-    <div class="row">
-        <div class="news span4">
-            <div class="well well-header">
-                <h1>南航动态</h1>
-            </div>
-            <?php echo cgs_posts_list_ul( "", array('post_type'=>'industrylink', 'numberposts'=>5, 'readmore'=>false) ); ?>
-        </div>
-        <div class="news span4">
-            <?php echo cgs_posts_list( "focus", array('numberposts'=>5) ); ?>
-        </div>
-        <div class="span4">
-            <div class="well well-header">
-                <a href="#"><h1>CGS光荣榜</h1></a>
-            </div>
-            <?php get_template_part("templates/content", "star"); ?>
-        </div>
-    </div>
 
     <ul class="thumbnails" id="piclinks">
         <li class="span3">
@@ -49,6 +32,31 @@
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cgsyk.jpg" alt="CGS月刊" class="thumbnail">
             </a>
         </li>
+    </ul>
+
+    <div class="row">
+        <div class="news span4">
+            <div class="well well-header">
+                <h1>南航动态</h1>
+            </div>
+            <?php echo cgs_posts_list_ul( "", array('post_type'=>'industrylink', 'numberposts'=>10, 'readmore'=>false) ); ?>
+        </div>
+        <div class="news span4">
+            <?php echo cgs_posts_list( "focus", array('numberposts'=>10) ); ?>
+        </div>
+        <div class="span4">
+            <div class="well well-header">
+                <a href="#"><h1>CGS光荣榜</h1></a>
+            </div>
+            <?php get_template_part("templates/content", "star"); ?>
+        </div>
+    </div>
+
+    <ul class="thumbnails" id="piclinks">
+        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
+        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
+        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
+        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
     </ul>
 
     <hr />
