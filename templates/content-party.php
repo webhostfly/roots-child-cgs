@@ -6,8 +6,8 @@
 					<h1>组织介绍</h1>
 				</div>
 				<div class="div" id="content">
-					<?php 
-					$intro = get_page_by_path('party/cgs_party_intro'); 
+					<?php
+					$intro = get_page_by_path('party/cgs_party_intro');
 					echo apply_filters( 'the_content', $intro->post_content );
 					?>
 				</div>
@@ -35,7 +35,7 @@
 			<h1>党员先锋岗</h1>
 		</div>
 		<?php //get_template_part("templates/content", "starlist"); ?>
-		<?php 
+		<?php
 		$args = array(
 			'post_type' => 'attachment',
 			'numberposts' => -1,
@@ -52,7 +52,7 @@
 						<?php echo wp_get_attachment_image( $pioneer->ID, $size = 'img_span2', $icon = false, $attr = 'class="media-object thumbnail"' ); ?>
 						<h6><?php echo apply_filters( 'the_title', $pioneer->post_title ); ?></h6>
 					</div>
-					
+
 				</div>
 				<?php endforeach; ?>
 
