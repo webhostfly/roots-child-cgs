@@ -51,14 +51,25 @@
             <?php get_template_part("templates/content", "star"); ?>
         </div>
     </div>
-
-    <ul class="thumbnails" id="piclinks">
-        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
-        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
-        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
-        <li class="span3"><a href="#"><img src="http://dummyimage.com/270x183" alt="" class="thumbnail"></a></li>
+<?php $fwpp = get_page_by_path('fwpp'); ?>
+<?php if ($fwpp):
+    $args = array(
+        'post_parent' => $fwpp->ID,
+        'order' => 'ASC'
+    );
+    $fwpp_pages = get_children( $args );
+?>
+    <ul class="thumbnails" id="fwpp">
+    <?php foreach ($fwpp_pages as $pg): ?>
+        <li class="span3">
+            <a href="<?php echo get_page_link($pg->ID); ?>">
+                <h3><?php echo apply_filters( 'the_title', $pg->post_title ); ?></h3>
+                <?php echo get_the_post_thumbnail( $post_id = $pg->ID, $size = 'thumb270' ); ?>
+            </a>
+        </li>
+    <?php endforeach; ?>
     </ul>
-
+<?php endif; ?>
     <hr />
     <div class="row">
         <div class="news span3">

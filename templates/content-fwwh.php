@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$args = array(
 		'post_parent' => $post->ID,
 		'order' => 'ASC'
