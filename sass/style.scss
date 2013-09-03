@@ -30,11 +30,10 @@ body {
 
 #header {
 	h1 {
-		background: url(assets/img/logo.png) no-repeat 0 0;
+		background: url(assets/img/salon.png) no-repeat 0 0;
 		height: 48px;
 		line-height: 48px;
-		text-indent: 52px;
-		@include single-text-shadow(1px, 2px, 2px, false, rgba(87, 87, 87, 0.22));
+		text-indent: -9999px;
 
 		@media (max-width: 767px) {
 			text-indent: 0;
